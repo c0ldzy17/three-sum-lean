@@ -1,0 +1,19 @@
+Inherited source and license provenance
+======================================
+
+LICENSE is copied without modification from benchmark/LICENSE in the
+verified source project. It accompanies the inherited sources bearing
+the original Apache-2.0 copyright/license notices. Those notices have
+been preserved byte-for-byte. In the inherited benchmark files, staging
+changes only local import paths. Additional ThreeSum proof modules also
+contain compatibility edits for the verifier's pinned Lean version.
+
+The inherited benchmark sources are EndStatement.lean,
+PaperStatements.lean, and the ThreeSumApsp/ directory, now beneath
+Submission/. Their recorded upstream is the 3sum-apsp source tree
+vendored by qawbecrdtey/ImprovedExponents at commit
+0725f2477587d67212936777b8a264c9793ac7bb. Original Anthropic, PBC
+copyright notices and source credits are retained.
+
+This staging notice does not assign a new author, copyright owner,
+or license to any additional project source.

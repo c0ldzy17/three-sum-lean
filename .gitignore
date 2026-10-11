@@ -1,0 +1,6 @@
+.lake/
+build-logs/
+VerifierChallenge.lean
+verification/builds/
+__pycache__/
+*.pyc
