@@ -1,5 +1,11 @@
 # Reproducing the submission
 
+For the current ternary development, use `python3 scripts/build_serial.py
+--aggregate` followed by `python3 scripts/audit_axioms.py`. These commands
+check the complete current submitted-source roster. The benchmark entry still
+proves `981/500`; see [TERNARY_PROGRESS.md](TERNARY_PROGRESS.md) for the target
+`1921/1000`, proved components, and remaining integration obligations.
+
 *Publication draft. Replace the repository/commit placeholders with the actual public immutable source before publication.*
 
 The Lean 4.33.1 port has completed all 223 planned build chains, including
@@ -56,7 +62,7 @@ suggestion to run `lake update mathlib`.
 
 The pinned Mathlib cache tool accepts an explicit list of module names and
 fetches their transitive imported artifacts. `scripts/mathlib-cache-roots.txt`
-contains the 135 roots selected for this proof, including the required Aesop
+contains the roots selected for this proof, including the required Aesop
 root. From the repository root:
 
 ```bash

@@ -1,5 +1,10 @@
 # Deterministic 3SUM in O(n^1.962), formalized in Lean
 
+**This branch develops a ternary construction targeting 1.921. The complete
+benchmark theorem still has exponent 1.962.** The new numerical certificates
+and executable components do not yet constitute an integrated faster solver.
+See [the exact progress and remaining obligations](TERNARY_PROGRESS.md).
+
 This project proves the exact benchmark statement
 
 ```lean
@@ -37,9 +42,10 @@ three permitted axioms. The Nanoda-enabled gate passed in 1,298.12 seconds,
 with explicit Nanoda, Lean kernel, and final Comparator acceptance. All four
 local gates passed for the same unchanged source snapshot. See
 [verification details](VERIFICATION.md) for exact
-receipt identities and local-environment limitations. Official Big O Speedrun
-acceptance has not been obtained; no official submission has been published
-from this package.
+receipt identities and local-environment limitations. The baseline release
+at commit `2b639655e07421b9ac743de9090459bab473a7c0` subsequently received
+[official verifier acceptance](https://github.com/bigospeedrun/verifier/actions/runs/38175066816).
+That receipt applies to the baseline, not to the new ternary development.
 
 ## Method
 
