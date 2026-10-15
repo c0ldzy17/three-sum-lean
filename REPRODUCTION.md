@@ -1,63 +1,38 @@
-# Reproducing the submission
+# Reproducing the 1.921 submission
 
-*Publication draft. Replace the repository/commit placeholders with the actual public immutable source before publication.*
-
-The Lean 4.33.1 port has completed all 223 planned build chains, including
-`Submission`. Its full-closure audit passed for 20,534 theorem declarations
-across 667 submitted modules, with no submitted axioms and only `propext`,
-`Classical.choice`, and `Quot.sound` in transitive proof dependencies. The build
-finished on 11 October 2026 at 19:23:19 UTC, and the audit finished at 19:26:30
-UTC. See [verification details](VERIFICATION.md) for exact receipt identities,
-source hashes, and local-environment limitations.
-
-The pinned local Comparator and Lean kernel accepted the complete exported
-proof, and the separate target-axiom gate passed. The Nanoda-enabled gate also
-passed, with explicit acceptance from both kernels and Comparator. All four
-local gates passed for the same unchanged source snapshot; official hosted
-acceptance remains pending. The commands below describe independent
-reproduction with ordinary tools.
+The frozen-source full build and axiom audit passed on 15 October 2026.
+The historical 1.962 acceptance is documented separately in
+[VERIFICATION.md](VERIFICATION.md).
 
 ## Pinned inputs
 
-Use ordinary Lean/Lake with `leanprover/lean4:v4.33.1`. The submitted project pins
-Mathlib to `0df444a360eaa60ab8c11dca51a86af692955474`; the included
-`lake-manifest.json` fixes all nine dependency revisions and is copied from the
-verifier’s pinned profile. Keep that manifest unchanged. `lake update` is not a
-necessary reproduction step and may change dependency resolution.
+Use the ordinary Lean release `leanprover/lean4:v4.33.1`. Mathlib is pinned to
+`0df444a360eaa60ab8c11dca51a86af692955474`; `lake-manifest.json` fixes the
+remaining dependencies. Keep the toolchain, project configuration, dependency
+manifest, trusted statement, and model/compiler sources unchanged.
 
-Use a Unix-like shell with Git, Elan/Lake, Python 3, and curl available on
-`PATH`; curl 7.81 or newer is recommended by the pinned Mathlib cache tool.
-
-Start with a clean checkout of the published commit:
+Start with the immutable published source revision:
 
 ```bash
-git clone PUBLIC_REPOSITORY_URL three-sum-proof
+git clone https://github.com/c0ldzy17/three-sum-lean.git three-sum-proof
 cd three-sum-proof
-git checkout FULL_COMMIT_SHA
+git checkout 74516abc0b3ea820c21a3e07a30d0dfe3f93816f
 elan toolchain install leanprover/lean4:v4.33.1
 lake env lean --version
 ```
 
-The last command must report **Lean 4.33.1**, not a release candidate or a newer
-version. The checked-in configuration and dependency manifest select the
-required build; no custom compiler, workspace launcher, or proof-checker patch
-is required. Python 3 runs the cache-root command below and the small serial
-build helper.
+The last command must report Lean 4.33.1. No custom compiler or proof-checker
+patch is required. Python 3 runs the repository's verification helpers.
 
-Lake can emit two expected “manifest out of date” warnings saying that the
-Mathlib Git URL and revision changed. The verifier's generated configuration
-uses a URL ending in `.git` and the exact commit, while its unchanged manifest
-records the URL without that suffix and the input tag `v4.33.1`. Both select the
-locked commit shown above. These descriptor warnings do not change the locked
-revision. Keep the pinned files unchanged, despite the warnings' generic
-suggestion to run `lake update mathlib`.
+Lake may report the known Mathlib manifest descriptor warnings: the generated
+configuration uses a `.git` URL and commit, while the unchanged manifest records
+the corresponding URL and `v4.33.1` tag. Keep the pinned manifest unchanged;
+`lake update` is not a reproduction step.
 
-## Dependency cache
+## Restore dependency artifacts
 
-The pinned Mathlib cache tool accepts an explicit list of module names and
-fetches their transitive imported artifacts. `scripts/mathlib-cache-roots.txt`
-contains the 135 roots selected for this proof, including the required Aesop
-root. From the repository root:
+The pinned cache tool accepts the roots in
+`scripts/mathlib-cache-roots.txt`, including their transitive dependencies:
 
 ```bash
 python3 - <<'PY'
@@ -68,94 +43,86 @@ subprocess.run(['lake', 'exe', 'cache', 'get', *roots], check=True)
 PY
 ```
 
-Check the cache command's exit status and output, and preserve them with your
-build record. Cache restoration does not verify the proof. The ordinary
-broader `lake exe cache get` is also supported by the pinned cache tool, but
-downloads substantially more than this proof’s selected closure. A source
-build remains possible when caches are unavailable, with additional time and
-storage requirements.
+Preserve the command's exit status and output. Restoring a cache does not
+verify the submitted proof. Building dependencies from source is also possible.
 
-## Build the exact entry point
+## Build every submitted source
 
-The verifier’s source planner groups the local modules into ordered dependency
-chains. The supplied `scripts/source-chains.json` contains that plan. Build one
-chain endpoint at a time to avoid starting a large number of independent Lean
-processes:
+Freeze the source tree before checking. The planned roster is
+1,198 modules in 754 dependency chains;
+`scripts/source-chains.json` must cover the current `Submission.lean` and
+`Submission/**/*.lean` exactly once.
 
 ```bash
-python3 scripts/build_serial.py
+python3 scripts/build_serial.py --aggregate
 ```
 
-The helper checks the exact `lean-toolchain`, `lakefile.toml`,
-`lake-manifest.json`, and supplied chain-plan hashes, verifies the actual Lean
-version, and uses ordinary `lake build` with `LEAN_NUM_THREADS=4`. It records
-the source hashes, command, elapsed time, exit code, and log hash for each
-attempt in `verification/builds/<timestamp>/results.json`. It stops at the first
-failed chain and preserves its log.
+This invokes ordinary Lake with every planned module explicitly selected.
+It checks the exact configuration/plan hashes, actual compiler version, source
+coverage, and unchanged source hashes through completion. Results and logs go
+to `verification/builds/<timestamp>/`. The final build receipt is
+[successful build receipt](verification/receipts/lean-1.921-20261015/build-results.json), finished 2026-10-15T12:49:20.886263+00:00.
 
-The last chain ends at module `Submission`, whose `Submission.lean` exports:
+Serial endpoint checking is available as `python3 scripts/build_serial.py`.
+A diagnostic restart may use `--start-at INDEX`, but a resumed run records only
+its attempted suffix. Record a complete successful invocation from index zero
+for final whole-source verification. Do not edit submitted sources during a
+build or audit; changed sources require new checks.
+
+The entry module can also be selected explicitly with `lake build +Submission`.
+That targeted check does not replace the complete source build. Its
+export is:
 
 ```lean
 theorem Race.bound :
-    EndStatement.ThreeSum.SolvedInTime ((981 : Rat) / 500) := by
-  exact ThreeSum.solvedInTime_981_500
+    EndStatement.ThreeSum.SolvedInTime ((1921 : Rat) / 1000) := by
+  exact ThreeSum.solvedInTime_1921_1000
 ```
 
-After resolving an interrupted or failed build, resume at its **zero-based**
-chain index, for example:
+## Audit the exact source closure
+
+After the complete build succeeds on the frozen sources:
 
 ```bash
-python3 scripts/build_serial.py --start-at 17
+python3 scripts/audit_axioms.py
 ```
 
-Earlier successful logs remain in their original run directory. A restart
-records only its own attempted chains; it does not claim to have rechecked the
-skipped prefix. Do not edit source files while a build is running. Changed
-source inputs require a fresh build from chain zero before recording a final
-clean verification result. Once dependency artifacts exist, explicitly select
-the entry-point module with `lake build +Submission`; the `+` prefix selects
-the module rather than the identically named library target.
+The audit imports every submitted module, rejects submitted axiom
+declarations, and checks every submitted declaration's transitive dependencies.
+Only these standard axioms are permitted:
 
-## Check the theorem’s axiom dependencies
+```text
+propext
+Classical.choice
+Quot.sound
+```
 
-The supplied `VerifierAudit.lean` imports `Submission` and runs
-`#print axioms Race.bound`. Execute it with the same pinned environment:
+The final audit receipt is [successful audit receipt](verification/receipts/lean-1.921-20261015/audit-results.json), finished
+2026-10-15T12:50:00.888793+00:00, with 43,763 declarations.
+Inspect the successful marker, exit code, `Race.bound` type, and axiom output.
+A `sorryAx`, custom assumed theorem, or evaluation-backed proof axiom fails
+this policy.
+
+For an additional targeted diagnostic:
 
 ```bash
 lake env lean -j1 -DautoImplicit=false VerifierAudit.lean
 ```
 
-Inspect the actual printed transitive dependency list. Every reported axiom
-must belong to:
+That printing-only diagnostic does not replace the enforcing full-source audit.
+The final source manifest is `SOURCE_MANIFEST.json`; its source identities and
+record references must agree with the exact build and audit receipts.
 
-```text
-propext
-Quot.sound
-Classical.choice
-```
+## Independent official checking
 
-An empty list or a subset is acceptable. `sorryAx`, a custom assumed theorem,
-or an evaluation-backed proof axiom is not. The printing command itself does
-not enforce a whitelist: the official verifier reads and checks this output,
-and a local reviewer must apply the same policy. Preserve both its exit code
-and the complete output; successful compilation alone does not perform this
-policy check.
+The intended issue fields are Problem `3sum`, Repository URL, immutable full
+Commit SHA, and reduced rational Bound `1921/1000`, through the verifier's
+[submission form](https://github.com/bigospeedrun/verifier/issues/new/choose).
+See the previously reviewed
+[submission guide](https://github.com/bigospeedrun/verifier/blob/025396033eede56e3af6e02ed2679ba828381bd5/docs/direct-submissions.md)
+for that route.
 
-## Independent acceptance
-
-For hosted submission, publish the exact sources in a public GitHub repository,
-retain its complete commit SHA, and use the four-field issue route described
-in [the README](README.md#submission-route). The form takes Problem `3sum`,
-Repository URL, Commit SHA, and the reduced rational Bound `981/500`.
-
-The official verifier compares `Race.bound` and its underlying definitions
-against the trusted statement, accepts the proof in Lean’s kernel, and checks
-the axiom whitelist. Its qualifying receipt establishes the site's **Lean
-Verified** status. Nanoda runs subsequently: a resource timeout does not
-invalidate an otherwise qualifying Lean-and-axiom result, while a confirmed
-Nanoda rejection blocks the row and an ambiguous failure requires review.
-See the [reviewed verifier policy](https://github.com/bigospeedrun/verifier/blob/025396033eede56e3af6e02ed2679ba828381bd5/README.md#what-lean-verified-means).
-
-Preserve the official receipt and exact public source commit when reporting
-hosted acceptance. The completed local build and full-closure audit should be
-reported with their own receipt scope while the official checks are pending.
+No new official acceptance or independent Nanoda result is established by
+local compilation and axiom auditing. Report any subsequent hosted receipt
+with its own exact source commit and scope. The baseline's official 1.962
+receipt does not certify the 1.921 revision.

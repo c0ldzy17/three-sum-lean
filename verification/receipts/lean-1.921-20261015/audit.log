@@ -1,0 +1,5 @@
+warning: manifest out of date: git url of dependency 'mathlib' changed; use `lake update mathlib` to update it
+warning: manifest out of date: git revision of dependency 'mathlib' changed; use `lake update mathlib` to update it
+RACE_BOUND_TYPE EndStatement.ThreeSum.SolvedInTime (1921 / 1000)
+RACE_BOUND_AXIOMS [propext, Classical.choice, Quot.sound]
+FULL_SOURCE_AXIOM_AUDIT PASS 43763 declarations

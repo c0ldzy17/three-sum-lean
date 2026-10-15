@@ -1,112 +1,93 @@
 # Verification record
 
-## Exact result
-
-The submission exports:
+## Exact 1.921 result
 
 ```lean
 theorem Race.bound :
-    EndStatement.ThreeSum.SolvedInTime ((981 : Rat) / 500) := by
-  exact ThreeSum.solvedInTime_981_500
+    EndStatement.ThreeSum.SolvedInTime ((1921 : Rat) / 1000) := by
+  exact ThreeSum.solvedInTime_1921_1000
 ```
 
-The exact reduced exponent is **981/500 = 1.962**. The trusted statement is
-[Submission/EndStatement.lean](Submission/EndStatement.lean); the complete proof
-is [Submission/ThreeSum/FinalSolver.lean](Submission/ThreeSum/FinalSolver.lean).
-See [METHOD.md](METHOD.md) for the algorithm and the connection to the specified
-word-RAM decision problem, and [REPRODUCTION.md](REPRODUCTION.md) for build commands.
+The exact rational target is **1921/1000 = 1.921**. The complete theorem is
+[`ThreeSum.solvedInTime_1921_1000`](Submission/ThreeSum/TernaryFinalSolver.lean).
+It supplies a concrete uniform program for every fixed original-input
+magnitude exponent κ. The target remains the original distinct-position 3SUM
+statement in [Submission/EndStatement.lean](Submission/EndStatement.lean).
 
-## Completed local checks
+**The final frozen-source build and full-source axiom audit passed.** The
+receipts below cover the identical 1,198-module source snapshot, including the
+exported `Race.bound` at `1921/1000`.
 
-All times in this record are UTC on **11 October 2026**.
+| Current 1.921 check | Exact result / evidence |
+|---|---|
+| Verified proof-source commit | 74516abc0b3ea820c21a3e07a30d0dfe3f93816f |
+| Submitted source roster | 1,198 modules, 754 chains |
+| Canonical proof-source digest | d80a4843eecc48b2942f6b312e4c0229a722c4d733f3f61afa5272dadc8555cc |
+| Complete source build | [successful build receipt](verification/receipts/lean-1.921-20261015/build-results.json) |
+| Build completion UTC | 2026-10-15T12:49:20.886263+00:00 |
+| Build log SHA-256 | c5264c659592cc704d6f25a833f631347f4127e2aeeca315d14549c09464fa14 |
+| Full-source axiom audit | [successful audit receipt](verification/receipts/lean-1.921-20261015/audit-results.json) |
+| Audit completion UTC | 2026-10-15T12:50:00.888793+00:00 |
+| Audited submitted declarations | 43,763 |
+| Audit log SHA-256 | af0e87fd7220169e7cae52cd54aaf9d3a8cb129e0e526ee71fbcd08915cde7d2 |
+| `Race.bound` transitive axioms | `propext`, `Classical.choice`, `Quot.sound` |
+| Hosted Comparator / official qualifying receipt | Not established for this revision |
+| Independent Nanoda acceptance | Not established for this revision |
 
-| Check | Actual result | Evidence |
-|---|---|---|
-| Complete Lean 4.33.1 source build | Passed all 223 planned dependency chains, including `Submission`; final completion 19:23:19 | Final central `Submission` log and receipt; all 223 chains were also replayed successfully in both Comparator logs |
-| Full submitted-module axiom audit | Passed at 19:26:30; 20,534 theorem declarations across 667 exact submitted modules; 27,199 submitted declarations in total | `full_axiom_audit_20261011T192354Z.json` and its complete log |
-| Pinned Comparator, Lean kernel | Passed; explicit Lean kernel and final Comparator acceptance; exit 0 in 879.265 seconds | `preflight_lean_20261011T192943Z.json` and its complete log |
-| Separate `Race.bound` axiom gate | Passed; exactly the three permitted axioms; exit 0 in 8.806 seconds | `preflight_audit_20261011T194431Z.json` and its complete log |
-| Pinned Comparator, Nanoda and Lean kernels | Passed; explicit acceptance from Nanoda, Lean, and Comparator; exit 0 in 1,298.12 seconds | `preflight_nanoda_20261011T194454Z.json` and its complete log |
-| Fresh source/package review | Passed all 17 checks; no source drift from the frozen controls | `source_checks_20261011T193426343965Z/source-checks.json` |
-| Port and original-source review | 621 modules unchanged after import normalization, 45 compatibility-edited; the textual review flagged no changes to theorem headers, definition bodies, added/removed declarations, or notice lines | `port_delta_20261011T193426343398Z/port-delta.json` and per-file diffs |
+Run the commands in [REPRODUCTION.md](REPRODUCTION.md). The complete build
+checks the pinned configuration, full source roster, actual Lean version,
+and source stability. The full-source audit rejects submitted axioms and
+permits only `propext`, `Classical.choice`, and `Quot.sound` in transitive
+proof dependencies. Declaration counts describe this exact source closure
+and Lean release; they are not counts of new mathematical discoveries.
 
-The full audit rejects submitted axiom declarations and checks every submitted
-theorem's transitive axiom dependencies, including private auxiliaries. It
-found only the permitted axioms `propext`, `Classical.choice`, and `Quot.sound`.
-Both `Race.bound` and `ThreeSum.solvedInTime_981_500` have exactly that list.
-The audit exited with code 0 in 156.066 seconds, with no source changes during
-the run. Its complete log has SHA-256
-`e5a5ebfc637d21939b3de7fd5611946b49999f8a864e4a1e96beb5ae60d23b62`.
+The manifest records a completed local check only when its successful,
+nonprovisional receipt matches all current submitted source hashes. Source
+changes invalidate the applicability of earlier receipts. Local build/audit
+receipts are distinct from hosted Comparator and independent-kernel results.
 
-The completed Comparator run printed both `Lean default kernel accepts the
-solution` and `Your solution is okay!`. Its complete log has SHA-256
-`6c6c978fcb746ffe3eddf39f93ff115f15510a6bc5a900c9ce28d0616275bd82`.
-The separate target-axiom gate log has SHA-256
-`4dc3bc531de140cd693871031402ca9cf178053f360aec3cc612d488639b09dd`.
-The Nanoda-enabled run printed `Nanoda kernel accepts the solution`, then
-`Lean default kernel accepts the solution`, and finally `Your solution is okay!`.
-Its complete log has SHA-256
-`ab2bc2c5c0f3492cb0e8d258786740b437b7a79e43508f36caa834c073fdf7d7`.
-All three preflight runs recorded unchanged source files, prepared controls,
-trusted staged controls, and local adapter identities. Together with the
-full submitted-module audit, **all four required local gates passed** for the
-same frozen source snapshot. None timed out or reported a rejection.
-
-The theorem count is a declaration count for this exact Lean version and
-module closure; it is not a count of newly invented mathematical results.
-The port's one source-context adjustment raises a local elaboration heartbeat
-limit. It changes neither the theorem statement nor the kernel's proof rules.
-
-## Source and checker identities
-
-The frozen submission contains **667 admitted Lean source files**, totaling
-**4,902,788 bytes**. These are `Submission.lean` and the additional sources under
-`Submission/`. The original verified project's source bytes are preserved.
-The source/evidence archive includes a per-file path, size, and SHA-256 manifest.
+## Preserved statement and toolchain
 
 | Input | Exact identity |
 |---|---|
-| Verifier repository commit | `025396033eede56e3af6e02ed2679ba828381bd5` |
-| Lean toolchain | `leanprover/lean4:v4.33.1` |
-| Mathlib commit | `0df444a360eaa60ab8c11dca51a86af692955474` |
+| Lean | `leanprover/lean4:v4.33.1` |
+| Mathlib | `0df444a360eaa60ab8c11dca51a86af692955474` |
 | Dependency manifest SHA-256 | `484af05025301c3920dfeb644f6dbb7f02b05f596bf48831c9324e383694db25` |
 | Trusted statement SHA-256 | `4291e3f05781cea42f9d672ff73ceac1f6d1a0c3021038e94372fa8f7e1ad987` |
-| Prepared source/control manifest SHA-256 | `2987de200763fd26bc39a891ee6364d8184b0017e824d75e72b171e20b582fbf` |
-| Comparator commit | `3927ad383f208ae977c340a91c48ac9b497d2097` |
-| lean4export commit | `15f6055e299ad5b89345e533cc2192f4cc00f659` |
-| Nanoda commit | `3a2407216ee84a75f9e1aead6803d0578be06ae7` |
-| landrun commit | `811cfff51ceaf3d9843708aa6d22e9b84ccac8b4` |
+| Historical reviewed verifier commit | `025396033eede56e3af6e02ed2679ba828381bd5` |
 
-Fresh public retrievals at 19:25 UTC confirmed the verifier commit and these
-requirements. All nine actual dependency Git HEADs match the pinned manifest.
-The unchanged submission controller's numeric gate returned `true` for
-`981/500`, a strict improvement over the then-leading listed claim
-`997891/500000 = 1.995782`. This is a dated eligibility observation, not a claim
-about exhaustive off-board priority. The immutable board snapshot is
-[site commit 41cf0881b439cbd583f03ca40cf45df05e5038a6](https://github.com/bigospeedrun/site/blob/41cf0881b439cbd583f03ca40cf45df05e5038a6/data/3sum.json).
+The trusted benchmark, every original proof/model/compiler source, and pinned
+dependency configuration retain the baseline bytes. The change to
+`Submission.lean` selects the new complete solver and changes the exported
+rational exponent. It does not change the task or machine semantics.
 
-## Local checking and official acceptance
+## Historical officially accepted 1.962 baseline
 
-The actual pinned checker binaries, target generator, and axiom/verdict policy
-are used for local preflight. Local launchers preserve executable-path and
-dependency-path environment settings required by this workspace. Their source
-and build identities are retained as evidence. They do not modify Lean's
-kernel, the proof terms, the comparison target, or the permitted-axiom policy.
-The ordinary public reproduction procedure uses the standard Lean distribution.
+Commit `2b639655e07421b9ac743de9090459bab473a7c0` exported `981/500 = 1.962`
+through `ThreeSum.solvedInTime_981_500`. Its
+[official hosted receipt](https://github.com/bigospeedrun/verifier/actions/runs/38175066816)
+applies to that baseline, not to the new 1.921 source revision.
 
-This local environment does not reproduce the hosted runner's complete outer
-filesystem, network, and cgroup isolation. Recorded child-process resource
-figures are local Linux measurements, not measurements of the hosted runner.
-The generated verifier-owned challenge is excluded from the public sources;
-its pinned hash and generating source are retained in the evidence.
+The historical local records on 11 October 2026 included:
 
-**Official Big O Speedrun acceptance remains pending.** No public repository
-commit or official submission receipt is established by this package. The
-verifier commit above identifies the checker; it is not the proof's eventual
-public source commit. Publish the public source tree, submit its actual full
-commit SHA through the repository-and-issue route, and retain the hosted
-receipt before using the site's `Lean Verified` label.
+| Baseline check | Historical result |
+|---|---|
+| Complete source build | 223 chains, 667 modules; finished 19:23:19 UTC |
+| Full-source axiom audit | 27,199 submitted declarations, including 20,534 theorem declarations; finished 19:26:30 UTC |
+| Comparator and Lean kernel | Exit 0; 879.265 seconds; `preflight_lean_20261011T192943Z.json` |
+| Separate target-axiom gate | Exit 0; 8.806 seconds; `preflight_audit_20261011T194431Z.json` |
+| Comparator, Nanoda and Lean kernels | Exit 0; 1,298.12 seconds; `preflight_nanoda_20261011T194454Z.json` |
 
-The accompanying archive preserves source bytes and verification evidence.
-It does not capture running processes or subagent state, and it does not bundle
-all regenerable third-party runtime and dependency installations.
+The historical full-audit log hash was
+`e5a5ebfc637d21939b3de7fd5611946b49999f8a864e4a1e96beb5ae60d23b62`.
+The Comparator, target-axiom and Nanoda log hashes respectively were:
+
+```text
+6c6c978fcb746ffe3eddf39f93ff115f15510a6bc5a900c9ce28d0616275bd82
+4dc3bc531de140cd693871031402ca9cf178053f360aec3cc612d488639b09dd
+ab2bc2c5c0f3492cb0e8d258786740b437b7a79e43508f36caa834c073fdf7d7
+```
+
+These identities preserve provenance and do not transfer verification to new
+sources. No new official record, hosted acceptance, independent-kernel result,
+or practical runtime claim is made by this document.
