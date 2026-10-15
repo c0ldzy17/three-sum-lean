@@ -1,13 +1,15 @@
 {
   "format": 2,
-  "created_utc": "2026-10-14T18:49:28.558021+00:00",
+  "created_utc": "2026-10-15T12:53:19.353244+00:00",
   "scope": "Current local source checkpoint, excluding this manifest and ignored build/runtime artifacts.",
-  "source_state": "Local unpublished work; no improved bound or public submission is asserted.",
-  "bound": "981/500",
-  "exact_target": "EndStatement.ThreeSum.SolvedInTime ((981 : Rat) / 500)",
+  "source_state": "Local unpublished work. The exported target is source metadata, not a verification or public-acceptance claim.",
+  "bound": "1921/1000",
+  "exact_target": "EndStatement.ThreeSum.SolvedInTime ((1921 : Rat) / 1000)",
   "exported_theorem": "Race.bound",
-  "benchmark_entrypoint_unchanged_from_baseline": true,
-  "new_work_scope": "New ternary component proofs and checking tools. No improved complete benchmark bound is claimed by this manifest.",
+  "benchmark_entrypoint_unchanged_from_baseline": false,
+  "benchmark_model_and_compiler_sources_unchanged_from_baseline": true,
+  "entrypoint_proof": "ThreeSum.solvedInTime_1921_1000",
+  "new_work_scope": "Ternary executable/proof integration and checking tools. Local verification is reported only by exact-source receipts below; entrypoint presence alone establishes no verified bound.",
   "baseline": {
     "commit": "2b639655e07421b9ac743de9090459bab473a7c0",
     "bound": "981/500",
@@ -15,10 +17,10 @@
     "original_source_release_sha256": "8523e26bf6a76a59ee7108217c83c4a5ce4e3336d7ebacf28f067ff67fb0f5aa",
     "historical_verification": "The original manifest's four-gate claim belongs to the original release, not the new modules in this revision."
   },
-  "proof_source_count": 749,
-  "proof_source_bytes": 5446817,
-  "proof_sources_sha256": "68c54d701ac344a456597662a4e7193a8d85646007147c6688769ee45037ac23",
-  "checkpoint_file_count": 765,
+  "proof_source_count": 1198,
+  "proof_source_bytes": 8389565,
+  "proof_sources_sha256": "d80a4843eecc48b2942f6b312e4c0229a722c4d733f3f61afa5272dadc8555cc",
+  "checkpoint_file_count": 1221,
   "files": [
     {
       "path": ".gitignore",
@@ -42,18 +44,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 5808,
-      "sha256": "c9632e5eb5cc2c550b51eb59a3f008fc0fd02b8a86eedcc26ebe04fd3ba59729"
+      "bytes": 4109,
+      "sha256": "5ca9d13556fa7f81e4c99e2031257766c354cb76ab319f542b8e7c8df3831348"
     },
     {
       "path": "REPRODUCTION.md",
-      "bytes": 7585,
-      "sha256": "e7e4ce089c5d2d4c66f48953f375983f22840c4e82af0650bbcd984f81a10fb8"
+      "bytes": 4940,
+      "sha256": "a05b1913ef28e84f61a47e08e3f27b3e634191d8705956f0ef6fea15cb3843e3"
     },
     {
       "path": "Submission.lean",
-      "bytes": 268,
-      "sha256": "683c18e5a6945f30a8755ecbf14b98e653e5f24606b7339cb00a678b20514704"
+      "bytes": 279,
+      "sha256": "40ad0c6a6e833433b992efc5c64f7770d68c5fe56eed2db64a34b48c401a4dfa"
     },
     {
       "path": "Submission/EndStatement.lean",
@@ -556,6 +558,11 @@
       "sha256": "a2c937b3e3444bf51fefa5eb219dd774d3fbe1f477216c881db7edc6ae23886e"
     },
     {
+      "path": "Submission/ThreeSum/FiniteMomentZeroDetector.lean",
+      "bytes": 4553,
+      "sha256": "dbd73f05f37ee0f5d320a26319dc6cbf3dbbc44e5a78d58952a468d479c69014"
+    },
+    {
       "path": "Submission/ThreeSum/GlobalEncoding.lean",
       "bytes": 14158,
       "sha256": "4f36316f94ee160b3e064e5cd84ff3140634a4b368244db47f9ff1b93ae79a33"
@@ -614,6 +621,11 @@
       "path": "Submission/ThreeSum/LayerCounts.lean",
       "bytes": 4856,
       "sha256": "90cb79427cef2d979ee17fee7cbe45c7082207ea4617d6d62af942e7d59d696a"
+    },
+    {
+      "path": "Submission/ThreeSum/LightArgumentTable.lean",
+      "bytes": 3004,
+      "sha256": "55af939a75e59fdbd3daacaf7bd3ed4bef35917856c898a1ea26de5417409476"
     },
     {
       "path": "Submission/ThreeSum/LightArray.lean",
@@ -886,6 +898,11 @@
       "sha256": "43eed6affb90499bb677deae42bd0950fe0c358efba866203a1f99c14f36d5d3"
     },
     {
+      "path": "Submission/ThreeSum/LightCoefficientDecode.lean",
+      "bytes": 5771,
+      "sha256": "5c753125130bbb6ceb7f9e0a7978d22d982f896aa623ef4fa8553df3147cf513"
+    },
+    {
       "path": "Submission/ThreeSum/LightColorArray.lean",
       "bytes": 5299,
       "sha256": "df62a159fbd6b24bbaec52d4337201b434f7d731e1b1c5ca94dfe631df936543"
@@ -931,6 +948,11 @@
       "sha256": "bf115fd4d33be07fe7d6f05ed648d5b0e7ae0d52a78ee01335c39a96356f0a61"
     },
     {
+      "path": "Submission/ThreeSum/LightColoredTwoSum.lean",
+      "bytes": 6969,
+      "sha256": "0293879eb5c0827ac8b0c19e3878cb9cecc67ac9f54dc0c1711fc4c492c260fd"
+    },
+    {
       "path": "Submission/ThreeSum/LightCoverGreedy.lean",
       "bytes": 10630,
       "sha256": "504f02185cfee273a16904bd672d39d058617c24eea7cc6baaf1692fec918ced"
@@ -964,6 +986,11 @@
       "path": "Submission/ThreeSum/LightCyclic.lean",
       "bytes": 8050,
       "sha256": "23196095be0139bd0399346bff8725688e16ddabe29f8ece6243404e2d090ad8"
+    },
+    {
+      "path": "Submission/ThreeSum/LightDeletedTwoSum.lean",
+      "bytes": 7683,
+      "sha256": "a2cb8bd36f705ed95c270640581bca98ed3be454dab22b746d9c6d03a9238400"
     },
     {
       "path": "Submission/ThreeSum/LightDenseCap.lean",
@@ -1071,9 +1098,109 @@
       "sha256": "a6a22bc9e9a734447f3ce21a07f7aecc8af2c2a854fd67d8dc51eec4ff27147e"
     },
     {
+      "path": "Submission/ThreeSum/LightExtensionBackend.lean",
+      "bytes": 7644,
+      "sha256": "d0a4364d09a7cd015a35e2afbcaaf69cee37d2c498be28d5b28a8bd7bdc307b1"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionBackendBudget.lean",
+      "bytes": 1449,
+      "sha256": "b4389dd6ccbae4c417a6c7b7d63240af63ade84dd29221e3b81e73e7fe33ac5e"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionBackendLayout.lean",
+      "bytes": 7966,
+      "sha256": "c3eb1890cbb196ae86cbc0eafb8102a6cce3132c3d87575c4073171797e6d6c7"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionBackendResources.lean",
+      "bytes": 4574,
+      "sha256": "c75796e6398a688a3ccdd9ca126e9c2022723df9dde9685a65450a4c2aeda7c4"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionBackendSetup.lean",
+      "bytes": 7170,
+      "sha256": "2737f37030214d38d332eabc750514c326dfc24f4e5d4c13e88f8fff3043d5f7"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionBackendSetupBudget.lean",
+      "bytes": 3894,
+      "sha256": "a44b3825b137936a85d3b23153f42bc61f4f241d47228188affe2141a144a0ca"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionFactorCheck.lean",
+      "bytes": 5737,
+      "sha256": "8679482f2db987e1693eef03b4fabe65d2d4174c6c86caa2a57c272bfe7041d9"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionFactorPredicate.lean",
+      "bytes": 7438,
+      "sha256": "516285df1bd4f089195804186948e82e8f3c57268379f18da4d76f83630469da"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionFactorSearch.lean",
+      "bytes": 4302,
+      "sha256": "2491db0e98dd0199709be3e4b715be1b570e18765187a5b8ba2755903d96a41d"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionFieldMultiply.lean",
+      "bytes": 1668,
+      "sha256": "027af34b4a4212d21ad4bb700b8df49bde4a8d99cd459c7a0a87be6454e2785b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionMenuBudget.lean",
+      "bytes": 6618,
+      "sha256": "5ff227b44e2c19e4847d12465303013db98534ff6e08fd676a53ab67ba1a1f66"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionMenuMatrix.lean",
+      "bytes": 5409,
+      "sha256": "0edb6f29e42cfe2312daee69d6b1262c1bda3d820a50e20ba8cb33059450ae45"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionMenuSemantics.lean",
+      "bytes": 4363,
+      "sha256": "d88d920dd79537943dce9fa9cdfc1e19b0d70afe28a9ff85d0c859e739a817ee"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionMultiplyCell.lean",
+      "bytes": 8916,
+      "sha256": "7fda10c8d20fc226d45e7e6950b217f73af4ec6560cef4e890f8aae1ad73e674"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionMultiplyTable.lean",
+      "bytes": 7867,
+      "sha256": "86ff263285d1a21b87c3b080b17b8774aae142e046a04ef0ca25c057e6f08b03"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionQuotientPredicate.lean",
+      "bytes": 10157,
+      "sha256": "50867cee86de9e236f70c0456ba7c75ca0c4432a595ec7e185d43011da9806aa"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionQuotientSearch.lean",
+      "bytes": 4186,
+      "sha256": "fcffe07c27f095d64f293eb0f1ab8b2791b1a94238c3cb1916912806d82091bc"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionSeedMatrix.lean",
+      "bytes": 6099,
+      "sha256": "8538f25a616b6dd19610877df1acf63e265f33af5aeb4b0891256dd55d9d0919"
+    },
+    {
+      "path": "Submission/ThreeSum/LightExtensionSeedRow.lean",
+      "bytes": 5703,
+      "sha256": "6184d14eb5f580bf9b2701416acb3b6267a45772b839d47fbfa5c39cb37a6471"
+    },
+    {
       "path": "Submission/ThreeSum/LightFiniteTable.lean",
       "bytes": 4172,
       "sha256": "ee3254e61d74082091239999951e80820ffc7b037b41ecb8cc8e56ffc8da2738"
+    },
+    {
+      "path": "Submission/ThreeSum/LightFixedArithmetic.lean",
+      "bytes": 6402,
+      "sha256": "e15bc1d0f8f26c618bb4178696ad74e027b6bf222a63f78021f35e400eea3918"
     },
     {
       "path": "Submission/ThreeSum/LightFixedRadixDictionary.lean",
@@ -1109,6 +1236,16 @@
       "path": "Submission/ThreeSum/LightHistogram.lean",
       "bytes": 5386,
       "sha256": "7501cd974bc05212c45867eecda563a460ba6b4ff7066053c4249db1e873f984"
+    },
+    {
+      "path": "Submission/ThreeSum/LightIrreducibleBudget.lean",
+      "bytes": 5575,
+      "sha256": "e445132ffa1c4f66ee0c91acfea720a12408803bd733947742889b1fb2214b10"
+    },
+    {
+      "path": "Submission/ThreeSum/LightIrreducibleFinder.lean",
+      "bytes": 20493,
+      "sha256": "27f3e5515b3c34cf139f1c9b85d3b84480955c2d12736c06ace364c843a6b062"
     },
     {
       "path": "Submission/ThreeSum/LightKaratsuba.lean",
@@ -1276,9 +1413,24 @@
       "sha256": "3bd32930324f3ca3bb7cab8e3caef26e8a245d374b751220f8bafe8b77455ab7"
     },
     {
+      "path": "Submission/ThreeSum/LightMomentDeterminant.lean",
+      "bytes": 9041,
+      "sha256": "ce41cef1da482e29e25540dc71021168e22893fe088dcfe4942b18b93d748221"
+    },
+    {
+      "path": "Submission/ThreeSum/LightMomentZeroDetector.lean",
+      "bytes": 6083,
+      "sha256": "08baf7b5ded3a29c597b481603a820be438339a92627fff6fd29fe90a76eaa37"
+    },
+    {
       "path": "Submission/ThreeSum/LightNatPower.lean",
       "bytes": 2735,
       "sha256": "9b4e8dd534e5331398abd45bdd956288c7e29064400705782b76b7b6db940dc3"
+    },
+    {
+      "path": "Submission/ThreeSum/LightNaturalDot.lean",
+      "bytes": 5396,
+      "sha256": "3d618a46c0ea31847bdc7eb9277f860b10b9b627f409098e52bf72e3a56c2ac6"
     },
     {
       "path": "Submission/ThreeSum/LightNormalize.lean",
@@ -1291,9 +1443,44 @@
       "sha256": "da817d027b362b8b058774b567d8788163bac96f03b69c802a753399eaf96f9c"
     },
     {
+      "path": "Submission/ThreeSum/LightOriginalBucketFilter.lean",
+      "bytes": 5980,
+      "sha256": "a112b8d5a0dfd0de7beedcc155e96eab88755247c32de5372c29ccb90d0367c6"
+    },
+    {
+      "path": "Submission/ThreeSum/LightOriginalCollisionCleanup.lean",
+      "bytes": 13662,
+      "sha256": "47365067a1c66c1ad8d3f267367db00db0442f4755b445c7487a247ea6a59e8e"
+    },
+    {
+      "path": "Submission/ThreeSum/LightOriginalCollisionScore.lean",
+      "bytes": 7222,
+      "sha256": "d9f5d201b65777db35f88c7efab1ce630fbdbf65f34da1621c4b7f6650e036b4"
+    },
+    {
       "path": "Submission/ThreeSum/LightOriginalOffset.lean",
       "bytes": 10698,
       "sha256": "cc62bb196ea49179176b6e4c07413f05b8479b54fd14b5ba014ac6ace06a3e3e"
+    },
+    {
+      "path": "Submission/ThreeSum/LightOriginalSurvivorPair.lean",
+      "bytes": 10175,
+      "sha256": "0050e416f92514650ec1f99dffb0c5e8ae5e047ed2f72d006b4fe34b5ed7ee6b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightOriginalSurvivorResources.lean",
+      "bytes": 3841,
+      "sha256": "cf08d6e3e3743b79817bcd062ae6bbf33b486bbcc5d87837a15f53318180c1be"
+    },
+    {
+      "path": "Submission/ThreeSum/LightOriginalSurvivorStage.lean",
+      "bytes": 9477,
+      "sha256": "fe613ade08454ad5e88de3fd9d7024791c5f78282be89318c21fc89e318ae515"
+    },
+    {
+      "path": "Submission/ThreeSum/LightOriginalSurvivors.lean",
+      "bytes": 3818,
+      "sha256": "9b71ab57a1a99884bc37b4db4e2c0142d2d6a53f9da1171509ac2505a227b051"
     },
     {
       "path": "Submission/ThreeSum/LightOriginalTripleRow.lean",
@@ -1336,6 +1523,26 @@
       "sha256": "6f7ecdb4ea9ce37d69536c8da757e191423b1d32a29be8d46634e8ef491ca32e"
     },
     {
+      "path": "Submission/ThreeSum/LightPairSearch.lean",
+      "bytes": 3936,
+      "sha256": "655814b292302839c21c6dfa57cf24e49ff88b1717ca3b5a93958e781a25d4c0"
+    },
+    {
+      "path": "Submission/ThreeSum/LightPairSearchMain.lean",
+      "bytes": 3582,
+      "sha256": "9cc0322e65c3895b4cfd5b3c939d998df4cd731cde0c56ad80f942b8bce89e60"
+    },
+    {
+      "path": "Submission/ThreeSum/LightPairSearchProgram.lean",
+      "bytes": 1518,
+      "sha256": "9fd0d4fd313051e23c69c51afcf77a3f00cb2606479e2f7d6240214e00606f4d"
+    },
+    {
+      "path": "Submission/ThreeSum/LightPairSearchResult.lean",
+      "bytes": 1222,
+      "sha256": "d19cb0e2e52ea92d755f393ad886802f931e03d89ddf325348b3fe650e464ab6"
+    },
+    {
       "path": "Submission/ThreeSum/LightParameterInit.lean",
       "bytes": 11113,
       "sha256": "b0fe3c693084418b924d0afb5cfdc141859cc39e9de41d9b72992203188e8a71"
@@ -1346,14 +1553,44 @@
       "sha256": "053dee9cb9e91af1c84873b3352d05a32b4cc47b244138117e02c84c21d56898"
     },
     {
+      "path": "Submission/ThreeSum/LightPolynomialCoefficient.lean",
+      "bytes": 7808,
+      "sha256": "212c6bd53e95d8ed72130905134e47c1c0c5bf05b2573ba9ebd1984e839eff5d"
+    },
+    {
+      "path": "Submission/ThreeSum/LightPolynomialProductArray.lean",
+      "bytes": 4094,
+      "sha256": "437e3f3870c2c3acadebd618094dbc13b73d599075b1b17b1b4a9d4b990a643f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightPolynomialProductCheck.lean",
+      "bytes": 5880,
+      "sha256": "40fe8ad772c1bc89f629fe25b84882a7ca1e2e343f56cd3781d2a827d2f628cb"
+    },
+    {
+      "path": "Submission/ThreeSum/LightPolynomialQuotientCheck.lean",
+      "bytes": 5902,
+      "sha256": "70033203ccac6c13e8bb2a8f5e95ae2c879888c7ed669bdfc6ba582d4dcb0968"
+    },
+    {
       "path": "Submission/ThreeSum/LightPrimality.lean",
       "bytes": 7208,
       "sha256": "ee8e5d8d722fc88c19e77bfdb5b4dba73f5b1aed2d292e21fa753896c4b9164e"
     },
     {
+      "path": "Submission/ThreeSum/LightPrimeAddArray.lean",
+      "bytes": 3800,
+      "sha256": "4a536342c48544137a158811184ae4aa0cf1131f3c718d1ee8d1a42e052b3948"
+    },
+    {
       "path": "Submission/ThreeSum/LightPrimeChain.lean",
       "bytes": 16687,
       "sha256": "186b1ce13be64fed0871919aa6a7b85119af5429388b7e0de638e331159b5442"
+    },
+    {
+      "path": "Submission/ThreeSum/LightPrimeCoefficient.lean",
+      "bytes": 3217,
+      "sha256": "df5ab97be2897891cc7134b4396836fa839d8226da0746df64696ac3b89a0661"
     },
     {
       "path": "Submission/ThreeSum/LightPrimeMinimum.lean",
@@ -1796,6 +2033,16 @@
       "sha256": "fa24d7fae9243f986874e0b19e0b02ebb16de85becb8d3f99e14b274b43856e2"
     },
     {
+      "path": "Submission/ThreeSum/LightSignedCoefficientLayout.lean",
+      "bytes": 3711,
+      "sha256": "edd36fc58b17c7f94e00fc7567f6f019449d85d560eb529eed62bbb15a7ae2b0"
+    },
+    {
+      "path": "Submission/ThreeSum/LightSignedCoefficientMatrix.lean",
+      "bytes": 3884,
+      "sha256": "8950c2937244b71d05f3bc288b1fd82bb947174020b05cbf6c2ac1c4dd3106d4"
+    },
+    {
       "path": "Submission/ThreeSum/LightSignedFiniteTable.lean",
       "bytes": 4077,
       "sha256": "1d720b6a3068802c56be7230220f743cab4d2ba544891f0d628f016bf3789259"
@@ -1824,6 +2071,11 @@
       "path": "Submission/ThreeSum/LightSignedLeafTable.lean",
       "bytes": 12204,
       "sha256": "06c86f053e2d71a525206eb6101148f545d1b50300e6fa632da2e2cb18dbc451"
+    },
+    {
+      "path": "Submission/ThreeSum/LightSignedRowHash.lean",
+      "bytes": 4407,
+      "sha256": "dc5ee3222d50c9bfa360d7088548b631406b97ad461ec2297f8e4abf6e67b9f0"
     },
     {
       "path": "Submission/ThreeSum/LightSmallDivide.lean",
@@ -2036,6 +2288,21 @@
       "sha256": "d3ddc4a626b6813edbf6ea704502f8f2d1b2279f1ff4dc1061e5c911afeee507"
     },
     {
+      "path": "Submission/ThreeSum/LightSpanAxpy.lean",
+      "bytes": 3663,
+      "sha256": "7a8406cd1f0f9b1cc50e95c69047cd05f1193546aeab6659c967b59a7785e7b5"
+    },
+    {
+      "path": "Submission/ThreeSum/LightSpanCatalogStep.lean",
+      "bytes": 9742,
+      "sha256": "711119dc7b1823b3ac67fbab7630e89d11bff670a6818187596c13faa0b26dd5"
+    },
+    {
+      "path": "Submission/ThreeSum/LightSpanCatalogTest.lean",
+      "bytes": 7801,
+      "sha256": "8c6bc2e83c2ffbe5e0a134fcd215ccc0c09b825e3610da30a09d0f0bcadb9d7f"
+    },
+    {
       "path": "Submission/ThreeSum/LightSparseQuery.lean",
       "bytes": 12931,
       "sha256": "38f8c5c3c4468c6580bc9663222c11661a3780251986fb453a768b5ca1252741"
@@ -2044,6 +2311,11 @@
       "path": "Submission/ThreeSum/LightStageLookup.lean",
       "bytes": 6855,
       "sha256": "39ac3e2bc8df43ee047bc31ff592b8345466dcc91cb930085ee36f92ce604f6d"
+    },
+    {
+      "path": "Submission/ThreeSum/LightStoredSpan.lean",
+      "bytes": 6651,
+      "sha256": "eb46a051be1ef42a771103cbb50dc16e2ee25679e61030619c63fa9cf0dd8ca2"
     },
     {
       "path": "Submission/ThreeSum/LightSubsetAddress.lean",
@@ -2101,9 +2373,64 @@
       "sha256": "61dffc4a1aea0085fe2689a5110b76cea4bc2e3b7c9e501ea3c8135566f8892e"
     },
     {
+      "path": "Submission/ThreeSum/LightTernaryAppendKeys.lean",
+      "bytes": 7568,
+      "sha256": "6ff82f8123aff18c98ba4b6640fdf3825d86beb97987d1d5c9429974e0e74df2"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryArenaTemplate.lean",
+      "bytes": 15239,
+      "sha256": "043a2e3beeb3166cb4686490a1f6010b86e9ce493948feb2a9ae2d034433907e"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryBankAssembly.lean",
+      "bytes": 8825,
+      "sha256": "5aac5ca5b8a368a0697383b0441147f2b3aa9d1941a8617bd361749ada7a55a5"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryBankCoordinate.lean",
+      "bytes": 9216,
+      "sha256": "d7867baf8a4a7234ba9f1c22f3f9fa1f179db732541896f90821d688569ce3e3"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryBankResources.lean",
+      "bytes": 2470,
+      "sha256": "916e86e8ad8e0bcf85a1f32e3762694ba55f9c814d22db05ed917e7797389d5c"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryBankStages.lean",
+      "bytes": 9786,
+      "sha256": "a02d07cbc8c61d506a1fe57dc7fac579b3829fc9d58b4eeea13c72fcf1d3436f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryBankSweep.lean",
+      "bytes": 6624,
+      "sha256": "9c203953ae43b5b8fea57b07641cf1b70a44ecde33d0abfc084004c76d56dd70"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryBudgetStep.lean",
+      "bytes": 4794,
+      "sha256": "c83e05b7a64813f510a76b259e955a1f2dda4587456cc080c6a455c0d4a6db3f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryCarryApply.lean",
+      "bytes": 5556,
+      "sha256": "97cc7f2a43fb7b16ffca0c87f9260e4070de66f979b93098e2a283a724ad80ae"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryCarryCodes.lean",
+      "bytes": 13177,
+      "sha256": "019657869667340e3d523dee86f6f04099915dd20b55d7c8ff66d9fa8ee158c8"
+    },
+    {
       "path": "Submission/ThreeSum/LightTernaryCell.lean",
       "bytes": 5063,
       "sha256": "533e9d12d86032243dccd5af421e2259e7e653a2cd30db33817a896c4ab0f7ec"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryCertifiedMomentDriver.lean",
+      "bytes": 7471,
+      "sha256": "9d5f3aa09e8dda9fd0ee7a5feffad2ba833aa92238bc6729ea09d1e3b8cef1cc"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryCodes.lean",
@@ -2111,9 +2438,89 @@
       "sha256": "4de59c782f530c2ae9fd63d5647651a26da343807b6468d956091c19668ca898"
     },
     {
+      "path": "Submission/ThreeSum/LightTernaryColorPrelude.lean",
+      "bytes": 17723,
+      "sha256": "3d8d481ef46c06c850a2eec9fdf644553d383b5a36bc5f9c95bb0290937b398f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryColorPreparation.lean",
+      "bytes": 3588,
+      "sha256": "17df3fd6afb1da5f16b8bc8fa559b5be80fbba54b68de1bf2ac6fddeffeee685"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryColorPreparationProof.lean",
+      "bytes": 32480,
+      "sha256": "855f7549dbc2731e3717da223d29aa0fbd6f592225f162e7be91aa54cca25840"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryColoredInitializationProof.lean",
+      "bytes": 13439,
+      "sha256": "c8946fe08c0452a66861d9f2c425cf8a358609b36e314169ed5d9086b9c93d4f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryColoredSolver.lean",
+      "bytes": 4367,
+      "sha256": "0955ba2528e0ba190afc49af94c6e749ae8031aa23309dd3e8c70b73b76a15ad"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryCommitKeys.lean",
+      "bytes": 2730,
+      "sha256": "36a546c9c9e97e6ee8496bd3ac1e672b21ee0ffdcae87a42c9d20c7f527a4002"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryCommitSpan.lean",
+      "bytes": 1367,
+      "sha256": "bc1a0db3e449aa2aab3274b95ee1ea0c62ddb2aab3b057aa8509d37bf491b803"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryCompactReporter.lean",
+      "bytes": 6910,
+      "sha256": "8e45d8e7cfea1bae46255feab131ca44cd63c3d5c96eef8089bf47fe8a7437a5"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryControllerFactory.lean",
+      "bytes": 10955,
+      "sha256": "46ba16cb7633b6a7dcd3ba5d1a13d438399b4724d32cfbb1fb62675ffe456e82"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryControllerFull.lean",
+      "bytes": 4404,
+      "sha256": "0fa2c2cc6f0452a3aa39ec3dc345caec7b73179e03fe33d6eb2ac9d2160eb5ec"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryControllerPlan.lean",
+      "bytes": 2960,
+      "sha256": "2b4c577bb2da3e2f1d9d4e35b7bf8e53b2a234e937dc38cb7118091b3996f5b9"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryCountFrontend.lean",
+      "bytes": 12319,
+      "sha256": "3ba353104c546d2a07c4d8c6877ced68d86b165cecfd5f908294d89848a95aba"
+    },
+    {
       "path": "Submission/ThreeSum/LightTernaryDictionaryJoin.lean",
       "bytes": 5782,
       "sha256": "5e30cea7722b70073a925e6dfa698eecee28530ae9c625ac6f6503b234dcb35c"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryDigitLength.lean",
+      "bytes": 4756,
+      "sha256": "b83bc319630544a82aa9dfad77e89b2b8abe5b66c6a434f0f9507f47be27f857"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryDimensions.lean",
+      "bytes": 6524,
+      "sha256": "e70715566f37142912a03b7611ae09eb5073379ea1453c270e4e2411fad41444"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryDimensionsBudget.lean",
+      "bytes": 5093,
+      "sha256": "8c41cb8159fce42bd770e5da420cf408e133ecdd841d009339dc14228677ac76"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryDimensionsTime.lean",
+      "bytes": 1763,
+      "sha256": "350548a437581b5cd5bd9504fbb74263d3409e15a27c2dc4eee1f3291b9659df"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryDivide.lean",
@@ -2132,8 +2539,13 @@
     },
     {
       "path": "Submission/ThreeSum/LightTernaryEulerMemo.lean",
-      "bytes": 8737,
-      "sha256": "507bd1468e97015710b14c2baa8bce242978c3f0c4c7cd1f8fd0025d52d68844"
+      "bytes": 8707,
+      "sha256": "5d8edb0ec7bbd0c278bd0c25199a9bf310ed994730c578e81ea579b1eb0c4900"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryEulerMetadata.lean",
+      "bytes": 10080,
+      "sha256": "de2eb2b98038a1fd143a3a4786e876de0293371c760b0bd5e83322790c7f44f0"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryEulerRow.lean",
@@ -2142,8 +2554,28 @@
     },
     {
       "path": "Submission/ThreeSum/LightTernaryEulerScan.lean",
-      "bytes": 9535,
-      "sha256": "8c93f60ff3963f1894809a3d04456422d877539b3ebf6f2ffdbcff05a7bba9c9"
+      "bytes": 9525,
+      "sha256": "b237833f9d12ad251ae316c21502b9385762a2231fbeb7f7c8bab5d324d79946"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFastProgram.lean",
+      "bytes": 4071,
+      "sha256": "15aaeb7893d9d29b2323a6ad599b82db1c45be05984bc0c03cadfa7b337f2288"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFastProgramProof.lean",
+      "bytes": 6055,
+      "sha256": "227cd8df7dc01eeee5dfece3af9cd88c523cea39187134753c44bb5dad340b71"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFinalPreparation.lean",
+      "bytes": 4434,
+      "sha256": "1d81ba43bd62da764a073e2a789e12ba0b4683aa27b41d856cb4b10f745ee842"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFixedChannelLoop.lean",
+      "bytes": 5597,
+      "sha256": "ba6aacaa22e13e2631bb6a7db1256f70546f73cacb1d0d871e56494be3f0c712"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryFrozenQuery.lean",
@@ -2154,6 +2586,76 @@
       "path": "Submission/ThreeSum/LightTernaryFrozenQueryBranches.lean",
       "bytes": 5238,
       "sha256": "410db2e1e0ca9b376190d7e80dcdaed5ea33eab0a8a7025c296f69eacd0f2224"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFrozenQueryMain.lean",
+      "bytes": 8965,
+      "sha256": "6c5ea8b219f3adcb20e5d7b05122507abf4307e15ad58e90a4d2a4ad89f5b080"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFrozenQueryPhysical.lean",
+      "bytes": 11799,
+      "sha256": "92ed89d45171c4266b099c60cfa89eb5ebae06e88953a6a3b77fe91624e6294b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFrozenQueryPrepare.lean",
+      "bytes": 4046,
+      "sha256": "ffd836c43e920eefaaaad16c017f77de8447c86c36751177116e9383e47c8c08"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFrozenQueryTime.lean",
+      "bytes": 4073,
+      "sha256": "4fb14fd0769cef2d515cd29b820207b90348e1a9d03c5685b04ce3b687723f0c"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryFullController.lean",
+      "bytes": 6877,
+      "sha256": "1bf3d8bdb556339398eb2e7c3544ebd06fca823f192d4b189c23a01f60ce3d11"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryGlobalPrelude.lean",
+      "bytes": 2654,
+      "sha256": "d65d7c08a19aec2510167a930d8d2147b15c8a21385a1e2e178c30f0a1c03bc6"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryGlobalPreludeProof.lean",
+      "bytes": 17944,
+      "sha256": "f4c508c1be7f74077cdbfb0671eb8bc0c1999e4136c0508e31da6107c019ee9f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryGroupBankResources.lean",
+      "bytes": 898,
+      "sha256": "d8f88ae8a0848ef1a4224d3968a0f92b814b080acbe9bfcaa0697546e3228db4"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryGroupBankStep.lean",
+      "bytes": 4903,
+      "sha256": "00b89aae1f47ab94ac30045dab608c0713198fe1933c6d2a0656eb2d62c1b6ff"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryGroupedBanks.lean",
+      "bytes": 12054,
+      "sha256": "888da413dc4d0bcc784d29f55e2009ab51d0c95f3db4b53a3c2ba19001741926"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryGroupedSourceKeys.lean",
+      "bytes": 7896,
+      "sha256": "9e40c1298592bf0f2c178d9ba1e08bcd4b6f3f4aae0e73e9415eef0a38bee1c4"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryGroupedSources.lean",
+      "bytes": 6656,
+      "sha256": "39f1c513e7c897dc41e11d3aeb4cc74076abc145710eae4d3ffad3b3e276f062"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryInitialBudgets.lean",
+      "bytes": 6058,
+      "sha256": "6df9611992846f4494644d64c383115feafefc95819d1417d006f4251ae3b544"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryInitialKeys.lean",
+      "bytes": 2129,
+      "sha256": "84144d150363b7208b392f9791224fed6b2c49a6c17c9680bb52bb5b451d84d0"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryInversePass.lean",
@@ -2171,6 +2673,61 @@
       "sha256": "30c6987baf3d24c8a2d62f755a21e7ed304758d83b1209cbd2d0b177567c0035"
     },
     {
+      "path": "Submission/ThreeSum/LightTernaryMomentAccumulate.lean",
+      "bytes": 3353,
+      "sha256": "7ebf5c9c1115e810c0b9eaacbcfa5c02685429eac2af8edd0bbaeed1deeed9ec"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentBatch.lean",
+      "bytes": 7178,
+      "sha256": "399c69c7cefe06a4f08ad87169520ef3c1d4cc50c593ff0c36b0f3f032990d9c"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentChannelFactory.lean",
+      "bytes": 5408,
+      "sha256": "2a6221fecac4fe5e95555133c929f331b3098256f457c319125dd04fd31381fd"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentChannelStep.lean",
+      "bytes": 8439,
+      "sha256": "d40ab443443f218220a5dc5385050f944a31637ab2b1c5684defc880a19ccd28"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentChannels.lean",
+      "bytes": 3139,
+      "sha256": "369f5b4726a19f69d8a349e3af8e7c50e138baa4e455cdc4aed46fed9118e1e7"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentDriver.lean",
+      "bytes": 7870,
+      "sha256": "3c8f3670542465b8b72711f0d1cef5fb89f4f8eb65763a6a5ac9e6dcceba7233"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentGather.lean",
+      "bytes": 2046,
+      "sha256": "2d0a60c2fafa3df7d067929854f93087a9f05dd85bfcbd67afd96feac36ce1fb"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentReporter.lean",
+      "bytes": 9069,
+      "sha256": "d63d501d888b442bdf6317a6de80f813bc3a50788e6378e1debf6f1b654f482a"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentRow.lean",
+      "bytes": 3791,
+      "sha256": "287cffc6414882d910007c3b1c1875a14502c910bb199310eecf7763c54a26bf"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryMomentSourceProgram.lean",
+      "bytes": 5138,
+      "sha256": "476aea570156a8d90d7e78b39c660106ec2a0ff94751090478b157903ead8b2b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryNearDigits.lean",
+      "bytes": 4793,
+      "sha256": "b52119f3b8999ddd06a351f3a0fc41de9f977a34559fc8a7b30c923219dfab57"
+    },
+    {
       "path": "Submission/ThreeSum/LightTernaryNearEnumeration.lean",
       "bytes": 10611,
       "sha256": "946cb09d88c33350101785785d4e8bf7d961b71ef7f0b102b970e90dd4e05165"
@@ -2181,9 +2738,64 @@
       "sha256": "f3f64dd260ce16a3ba5bad5d4325e5468699299f34ad2a8204690a79cc79b60d"
     },
     {
+      "path": "Submission/ThreeSum/LightTernaryNearPair.lean",
+      "bytes": 11713,
+      "sha256": "03418ed0ada9ecb017ac37a8390bef142f297b0f5de629099aae0f9b466f9bb3"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryNearSetup.lean",
+      "bytes": 6443,
+      "sha256": "640fd72beb7a8e1f7c7508ac18556e4c84deeb245f737bb8d407cc708878ea87"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryNearSource.lean",
+      "bytes": 10701,
+      "sha256": "14642b3dc40dec55a34f1fc265c7cd97959c99d2ea28a3dd6030fe1ef4145fef"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryNearSourceWords.lean",
+      "bytes": 7139,
+      "sha256": "4926ceef1a00d1b14938886e0973349b688890a6f139b703f5847a4473a2e3a5"
+    },
+    {
       "path": "Submission/ThreeSum/LightTernaryOriginalJoin.lean",
       "bytes": 4418,
       "sha256": "74695c80c4b566a75d069b2814f44e21a2a82a6d4f3ba6329a8c2fe2485c1a2d"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryOriginalRequester.lean",
+      "bytes": 3913,
+      "sha256": "7d67ea3d37de58023d7a886047cb8a9adce6ce10be54ffe7893269404bb8a38e"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPairedPolynomial.lean",
+      "bytes": 9816,
+      "sha256": "c726d2b003597ee8c42d82d35245bd87de5ed7546176306025a008b4bbe30f7b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPairedPotential.lean",
+      "bytes": 13784,
+      "sha256": "3934336cf1a1bd0037f73e9937c785581645b108251dd2ecc1a3370f9e63dbc4"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPairedPotentialBatch.lean",
+      "bytes": 8900,
+      "sha256": "8237316696af147d3147495d0cc1a82afe2e7b8d862812c3d86481056fabd04f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPairedPotentialBatchFinal.lean",
+      "bytes": 1491,
+      "sha256": "578b49d71af36a9d7535edc491a81737954d81b69abb4f8c665e9e00cc994ffd"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryParallelBudget.lean",
+      "bytes": 1977,
+      "sha256": "01a91209dc27b7b7784865486741692751bd1520b4147e6268a96afcf9d0f7c3"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryParallelDictionaries.lean",
+      "bytes": 9283,
+      "sha256": "3be1b449a6034175141866cf4d466e627677fd15205866a9bcdf25360fd880dc"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryPass.lean",
@@ -2191,9 +2803,94 @@
       "sha256": "32ebf124a60ef8e9b9b4549d5e343e5df73db6552d21fdcf160ae165854a12de"
     },
     {
+      "path": "Submission/ThreeSum/LightTernaryPhysicalMomentBatch.lean",
+      "bytes": 3367,
+      "sha256": "493e58d363ee2aedfde042a65d2c0fc986aa8638e0cdb402879555888cfac65d"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPostSelection.lean",
+      "bytes": 13573,
+      "sha256": "4096ee741ce31ee57256472370c80d82847d1c65c1e34cc7cba9612edc59dd35"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPostSelectionClosed.lean",
+      "bytes": 3505,
+      "sha256": "e7fc144b6fc32c85a125b91d35f890eb9856fe84e98699df2e4115492e13b274"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPredecessor.lean",
+      "bytes": 11609,
+      "sha256": "f391d195f9efe2a757e3d6f35518b9ff52a47b8282972226059bf8a49daa3ad2"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPredecessorTable.lean",
+      "bytes": 12417,
+      "sha256": "af614aa3b47f69fb089844814c7a85af928b915ef7e453aaaf13f1a6886c6fb2"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixFinish.lean",
+      "bytes": 13426,
+      "sha256": "5297e66abc64ef35829ca72770f9eb878720fe3b332814a5d46018c0d8c9ac5f"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixHeader.lean",
+      "bytes": 16132,
+      "sha256": "fccf4e5068a76754ef22c5bda9b10b5ebfed61f71caefaaeb4d387842dd696d6"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixInit.lean",
+      "bytes": 8349,
+      "sha256": "98066fd29a3bda53cc31022e27d7950d0ba89ef279b32d7a8f86e7a97a0286c8"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixLoop.lean",
+      "bytes": 8448,
+      "sha256": "a8e58b745b2a8eef00f9ecd445c4ef82305a5eef9f9e82e04827556e68f8794b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixPhases.lean",
+      "bytes": 6851,
+      "sha256": "e71916baeebb7a629bb8dfd1d81b314e49b456369c6e7f650bb46ed82534e308"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixPrepare.lean",
+      "bytes": 9601,
+      "sha256": "294ead08d701a19e117dffdd757c23c2446524b319b67130900b418e8d6f9808"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixSetup.lean",
+      "bytes": 15027,
+      "sha256": "7aaa10da2bfb0501ee0874fe8b7495cc82a3326b1c5a2b656d3f573293e5f072"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPrefixStep.lean",
+      "bytes": 6856,
+      "sha256": "8a415f21d3b4107220481ba7defd2c791b8bb8e7d95ebc1d34cd93679e3c538a"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPreparedPostSelection.lean",
+      "bytes": 11234,
+      "sha256": "47eb659677cfa57c9f11b680dbfbb4f18916c9df2d68e4267090bd1237f5b770"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPreparedState.lean",
+      "bytes": 6606,
+      "sha256": "88b32bbce56679821878ca721042c05cca84fb96c76544a3345f44d38275b331"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryPreparedWanted.lean",
+      "bytes": 8636,
+      "sha256": "bac5ffae8e039a075110331da6cb7802573489307bc0ced8d42f324142bb00e1"
+    },
+    {
       "path": "Submission/ThreeSum/LightTernaryProduct.lean",
       "bytes": 1595,
       "sha256": "0d91906e65569a800f0a74c77f07c274550a9d29943d991e227a6d38698e7af6"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryProductChannel.lean",
+      "bytes": 2759,
+      "sha256": "8eb6233314b23e19e7e4d59db36047c7d3263ef6a07b04bbe1808c6920f5feb9"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryProjectedJoin.lean",
@@ -2201,14 +2898,199 @@
       "sha256": "f2c21d63a762716091595d12fbee63070499dc2e309a2546aa12879ab77073bb"
     },
     {
+      "path": "Submission/ThreeSum/LightTernaryQuarticStep.lean",
+      "bytes": 4498,
+      "sha256": "0385bfe9a8248bba5b5107fd7bda53cc3c511b38d7093bb1258a131159861cd0"
+    },
+    {
       "path": "Submission/ThreeSum/LightTernaryQueryLookup.lean",
       "bytes": 3563,
       "sha256": "79f34c8ad0b4d34da86ec47bef08a7c8cd4c4765f4700238a7824b5043bf88bd"
     },
     {
+      "path": "Submission/ThreeSum/LightTernaryQueryPlan.lean",
+      "bytes": 2778,
+      "sha256": "a757e23cfda1db6ba80e330a2242b24ac9b20e20db311b9eeeaf26941432edfe"
+    },
+    {
       "path": "Submission/ThreeSum/LightTernaryRank.lean",
       "bytes": 5147,
       "sha256": "bc46e43066267c23b97f192e3b40afec4fd7ebe47f77c5391d4a4040184722ad"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryRankTable.lean",
+      "bytes": 5405,
+      "sha256": "83375902ab5d1fb1dbbcc659bc6e1440a7731b5bc8f2f2fdf20dc62a7e2f8752"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryRepeatWord.lean",
+      "bytes": 1732,
+      "sha256": "6f5fdbbaab3254c0691cd44897beaba6fe78822606b2f98df4e78cc4eeba7698"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryRequesterMatrix.lean",
+      "bytes": 15214,
+      "sha256": "a0773dfd1646de722033997e97ecb1451b4c5e0fd7966314b94eb6a5069d441b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryRowSelector.lean",
+      "bytes": 6954,
+      "sha256": "290f53193d07354f2bc5b2bf4db26ef1e40864bf43c5d04fa69c6826b64de72b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryScalarChannel.lean",
+      "bytes": 3654,
+      "sha256": "5915fe4efe8e49f843423fbd525d923be31d7525d1c46c7978e584da67fc9c06"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySeedController.lean",
+      "bytes": 11331,
+      "sha256": "759b2d1d1118995d8ff00aa934d590058b56526afbd87ccd2f09de246841965b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySeedControllerBudget.lean",
+      "bytes": 524,
+      "sha256": "acd497bcc9fb44741bf6d2ea318b4e301ad6895db6a0ca50cfcfac92f8ed7b6e"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySeedScore.lean",
+      "bytes": 17798,
+      "sha256": "98cd061c366e86e61955ea9d952bcdfe675c91ff4cf411209f4363c9ba5c40ff"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySeedScoreFactory.lean",
+      "bytes": 29480,
+      "sha256": "ae6f39f5c38669da92147bb65ff13767e3e68cd82c61f3785945594a8cc15ef8"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySeedScoreFull.lean",
+      "bytes": 8787,
+      "sha256": "733d86ee2475eb14a9817e0759ca8517dcc1dc4fb847720c4b26cade9575dc3d"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySignedMatrix.lean",
+      "bytes": 8562,
+      "sha256": "aa8548a8798031c9cc170f40b19b8b9a441b1a70e873e603458e6d14534f66dc"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySignedRow.lean",
+      "bytes": 8288,
+      "sha256": "076ba921c22d0195d9595e6005f8a1c03fee1690eeac58c41950df92f7d64934"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySourceCountHost.lean",
+      "bytes": 14687,
+      "sha256": "413b140efa0f714d11f4b4207427537f40dbaa92ffb84232b83862e45c61e72b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySourceHistogram.lean",
+      "bytes": 5887,
+      "sha256": "57e2dc88000d18147c3af487e8d623ffc2ed9c422b52f129aa1c8534ab32b60b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySourceHost.lean",
+      "bytes": 18192,
+      "sha256": "015979fa1d6e80990c82fd4342acd6616e31a0fe17c0b9b4539784299f505bdf"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySourceHostBudget.lean",
+      "bytes": 2611,
+      "sha256": "14d4ace06e305d6e0516a824af822e26ea1097abb8819044ca0b63a5a80381f7"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernarySourceKeys.lean",
+      "bytes": 5588,
+      "sha256": "a9fdde205bb4472c0b2f89808bddbf5ea626f18dc7ffe40a912332b760823d00"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTaggedChannel.lean",
+      "bytes": 3206,
+      "sha256": "38532e2deafe79d15cdc69437008f13fd0486a0e20a7b502b2a5ebf27c54c865"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorDriver.lean",
+      "bytes": 2080,
+      "sha256": "361d366d742f398555734d1c8a101b2e4efd805a250f5fbb6f02a8d63c15a834"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorDriverProof.lean",
+      "bytes": 8690,
+      "sha256": "9d2ea1cd6bb743dcc788199e6bcf6a61c5b26e40d734df951656931648cfcac9"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorDriverSyntax.lean",
+      "bytes": 1718,
+      "sha256": "eb1a9f9d9aae87ee215c54a25af2c13855af63284a1d00e9dd6e1a02aa40c76b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorFactory.lean",
+      "bytes": 4250,
+      "sha256": "9450ccf6f066dd3aa9f5d185d7dc9527c487e17e573f2a6a21f621fc6b839cb9"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorFactoryReady.lean",
+      "bytes": 7637,
+      "sha256": "9b3ad51228ee5ffdd37b07d9e7cf0421482bebd9a4431c5f0c96d26efdc34f38"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorFactoryScaled.lean",
+      "bytes": 2304,
+      "sha256": "701b4253525a7fd7abeeeed37851d24c658c7aff72a925314c1563cbfdd941f6"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorHeader.lean",
+      "bytes": 1571,
+      "sha256": "cf79a78ca2d9c1b02925e0eda021232ac9f797645d78f276394d1b2bbadd0408"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryTensorScatter.lean",
+      "bytes": 3030,
+      "sha256": "2d1b75155af39069183517fc3cd2cccb7f136a935d91bb3a6e926ba93fd31875"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWantedBatch.lean",
+      "bytes": 6262,
+      "sha256": "ea0fd2c0fb8f1b7ea1bc61466e821d7e53f77af8728eaae443a65e8b60c5dd4b"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWantedBudget.lean",
+      "bytes": 1884,
+      "sha256": "2dabe93d38e676d09554e51a8621099b3de5c47f24593bc6eb4beb0964ba7c09"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWantedCanonical.lean",
+      "bytes": 25645,
+      "sha256": "16c646383c9a6349c4bd1ffcb2f952c75ee4eb207e488a865f31db32aec5c578"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWantedDFS.lean",
+      "bytes": 19935,
+      "sha256": "3a48e4f34755266b560efc92d96a55c9d6f85eac49a6470c297365407057dda7"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWantedQuery.lean",
+      "bytes": 9227,
+      "sha256": "39a20b6ea346314d735036987b8dc4310bb935237813b3d3bf7c80cc51420005"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWantedRowDispatch.lean",
+      "bytes": 3921,
+      "sha256": "2d98805217296a33ed2173bbc01c364a549e60f6ba7014b18d31d80ded1c363c"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWantedRows.lean",
+      "bytes": 10534,
+      "sha256": "0ed3576795a6e8c2b911f3b456352f19c3b8b314b534ae9fcfa36d2b73ecf982"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWeightedHistogram.lean",
+      "bytes": 8258,
+      "sha256": "d677943c266faedc5d4dc8bb0483ba0dc095aff92c1d5d268361ab001a2515ea"
+    },
+    {
+      "path": "Submission/ThreeSum/LightTernaryWeightedSources.lean",
+      "bytes": 5647,
+      "sha256": "d2ff7c55c428bcca69b07e6fdfbb9d34de6cde863592c6ce01042bd4ac877e09"
     },
     {
       "path": "Submission/ThreeSum/LightTernaryWeightedSum.lean",
@@ -2459,6 +3341,11 @@
       "path": "Submission/ThreeSum/OutputKeyMasks.lean",
       "bytes": 2061,
       "sha256": "52cda99420509b67e96a6b84ea81c978d708f0d41a824e5643476eebf52801cb"
+    },
+    {
+      "path": "Submission/ThreeSum/PairFirst.lean",
+      "bytes": 2388,
+      "sha256": "474c3de190ba60ac524c11c7bd54829040686f4fdcf12b9a0dc128828c182679"
     },
     {
       "path": "Submission/ThreeSum/Parameters.lean",
@@ -3081,9 +3968,489 @@
       "sha256": "3d8873cb466bb8f5d3e4f5161903dccbb070224e0615ba60e14217507b47ac08"
     },
     {
+      "path": "Submission/ThreeSum/TernaryActualCleanupRuntime.lean",
+      "bytes": 6539,
+      "sha256": "81ffa46d6d27cad9ac3f0e3982211928b12e09f37906bd04027fddfbd4701892"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryActualColoredRuntime.lean",
+      "bytes": 31395,
+      "sha256": "bb56ceb1e1a805c632237388494dc56fbe058200284afccc6b5ca3598f61bf53"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryActualGlobalQueryRuntime.lean",
+      "bytes": 22181,
+      "sha256": "d954364438b779ed5d16251d67b15e65bbdfbe72fbcee85be4dba127af41a0a8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryActualPrefixRuntime.lean",
+      "bytes": 60355,
+      "sha256": "902d45cf09078d890ef632c25ffd7616d44322a78638418a782cdd79d2a5696e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryActualRuntimeParameters.lean",
+      "bytes": 2078,
+      "sha256": "1a8e73ad26ed950848bb8d173e32476d4ac13f41e253a11ab81378ad12b5531b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryActualSeedEnumeration.lean",
+      "bytes": 2448,
+      "sha256": "aa6c1765a4bc34b680b5af71dc5382a7cf2ee57f8d6b8ad4d0dc17d9fdcb85b2"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryActualSeedRuntime.lean",
+      "bytes": 53106,
+      "sha256": "221cf0d139ce7bfb8cb69542125726fc171bd53a2b996cb7458a5e5ab20858fe"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryAddressDecode.lean",
+      "bytes": 466,
+      "sha256": "a6f987efaca4ea50da23d3718b58a2a9268aa9d061e839a56dca9e1b75fe1680"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryAddresses.lean",
       "bytes": 3264,
       "sha256": "2b78f96e75b6eb28769cb3a02febfc0a3903976dfef40ab487bd8173f8b7ef87"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaAllocation.lean",
+      "bytes": 3670,
+      "sha256": "c65b4e031532cef5e040caafae9bb56d810d16ecb9db34366c4b46d8788488e8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaAllocationResources.lean",
+      "bytes": 3041,
+      "sha256": "2a1d383d09fbd2228faca3460b9768728fd27e8b762115570a3f0f7853b47a27"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaArgumentBudget.lean",
+      "bytes": 5953,
+      "sha256": "67f0c8eec3a7ad45c99ca099735201cec5761fc70469f2a86d34cff83a890231"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaArgumentWords.lean",
+      "bytes": 5978,
+      "sha256": "86d80a66cf4824d0b63e370816bd0b20b5d9944802ad8b4d3e132b90b7384ca9"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaBudgetExistence.lean",
+      "bytes": 5965,
+      "sha256": "e1938b5164b70a95561a7f75ff6c91e414f7640ce8e284bd1406044b9efae31f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCandidateGuard.lean",
+      "bytes": 3173,
+      "sha256": "5c3427f97b0f5cd0c26b7632b8be5a03ec590a0c69fcc5419069de46da5551c3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCandidateGuardAllocation.lean",
+      "bytes": 3161,
+      "sha256": "b01fb1b0f496e52eacbb829552f0a709591971186ca4d40d79a692c7acd69ba5"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCandidateScoreBounds.lean",
+      "bytes": 9151,
+      "sha256": "99462b7d4d4537f00fd120777628bf2b4a9b12cda3c58abe68192f861d1a7b24"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCapacity.lean",
+      "bytes": 1214,
+      "sha256": "4c94f72bbe7a1a717360ee49aa01956c2e8a4f3ca0104a8d5ba1721a76257e19"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCleanupAllocation.lean",
+      "bytes": 3945,
+      "sha256": "34c5c35a21e434eb39454bb3afc36c12275792f1115131b8646f817d831dcdfa"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCleanupLayout.lean",
+      "bytes": 4653,
+      "sha256": "5b0faa5bbe89f55839e2d87bc8cdf862dbf242d0fa781c45c77826a9c3632187"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCompactSupport.lean",
+      "bytes": 5860,
+      "sha256": "7cf963da2f770397f07419010652919b1c64aa46f7ef49e309a1627d906c5903"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaControllerCore.lean",
+      "bytes": 4599,
+      "sha256": "8272a131949969b9694d9416e57600136048b6d933d324aa93b8b4393f77928c"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaControllerPlan.lean",
+      "bytes": 6463,
+      "sha256": "bcf223aee195e584b5d79f6ee01d26a103a0078afe7f3fc83fb75f9d4ea6eb10"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaCountReady.lean",
+      "bytes": 10321,
+      "sha256": "76b04d83a27cf6d77de5603fee0b891c570e16246218bfcd22caaf14a6d24152"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFamilyBudget.lean",
+      "bytes": 8927,
+      "sha256": "99b22bee13e2a0bdd638294851b3c45d8ecde5ed20de196415dcaf165b90befe"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFinalBounds.lean",
+      "bytes": 5566,
+      "sha256": "38130a87a90c84489b0b6cd74cc81fbf078877227b57638c83194eadd3aafe98"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFinalGuardAllocation.lean",
+      "bytes": 5449,
+      "sha256": "d731556d5e6eb4d77619fef306f915536b5d1925a15af006afc96a5b41f50b4c"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFinalMetadata.lean",
+      "bytes": 8772,
+      "sha256": "292ba11c2508c8fcbeb4d1653a4ea5c4bc5310ce5b30bca58c4fac6e46b54e0f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFinalSolver.lean",
+      "bytes": 4186,
+      "sha256": "d5251ca63cc4027969b3499f2f8f9861c78fc3bcf78ac38e64f5d04ad9265d81"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFixedParameters.lean",
+      "bytes": 8921,
+      "sha256": "3450411755d1b90e2f9c8874c020343a9a9c0c9cbd96ce6dab727689fe52409b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFrontBounds.lean",
+      "bytes": 6561,
+      "sha256": "9a679056db39d3343c6dcb7886e5ebdb38de72fb737f7613138d7e3c27872e9a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaFrontendResources.lean",
+      "bytes": 6842,
+      "sha256": "192da8449e1388286a22af4a219f5743a7a21e37f899fd071ab72dbce2cbcc11"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaGuardTransport.lean",
+      "bytes": 12249,
+      "sha256": "9eb60deba741d4263c9c9d39261cd968f55ec5843b737f551bac07e5eaf0da11"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaHeaderAgreement.lean",
+      "bytes": 4464,
+      "sha256": "cdbbb7609ce5a22ee008db081a344b3fbdf84b6ce7766955a04aba30fc22e97a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaInitialSeedHeader.lean",
+      "bytes": 4889,
+      "sha256": "68117598099007e0ccdb928e3d07eb3ec68a187e1ba8309418b3642a72b510cf"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaLayout.lean",
+      "bytes": 3086,
+      "sha256": "522b85027307d22d330172f0895b52a9f82c157d3d094b400a5eba6fe5aba520"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaLoop.lean",
+      "bytes": 14774,
+      "sha256": "3038a328442a1317f7f0e39a46100b20d3f2921ce44ba6bbca4cd60139d20b10"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaLoopState.lean",
+      "bytes": 6831,
+      "sha256": "a633b97fd2fb7fd07427f34910255ff0152beaed95b98867c2d351d2840fadb8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaMomentResources.lean",
+      "bytes": 6258,
+      "sha256": "d6ff5dd2ddd106b50b043df712ff45312616893dc801186b321acbd769c02b70"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaNativeComplete.lean",
+      "bytes": 2611,
+      "sha256": "d448d0c663202c85a1c55519f07132818fb34dbb81775c57d8e8e7d2b00132bc"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaOriginalInputs.lean",
+      "bytes": 3809,
+      "sha256": "144bddd5b54ebcb3b248b55ca76d831a5af171ecb858da5af47a6e7b5e955b35"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPairMass.lean",
+      "bytes": 3582,
+      "sha256": "13dc6b75a13df54f9cf8d5c420351c2afd96b119749d1fa9ec0dcbda99953fc3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPairModel.lean",
+      "bytes": 9228,
+      "sha256": "ef74155ae98edd3074c377c619468da7f2382a70a3a7b073ba47598b3338fb72"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPairRestriction.lean",
+      "bytes": 4957,
+      "sha256": "362f3124aff1fad5f738a2fce059aa41518fde37815a1a03a9c986b2295d49ef"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPhase.lean",
+      "bytes": 9936,
+      "sha256": "d2b1baa88eebd624e98f27679266225eb1c33792b4ea151ad2622ed38205a66e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPhaseBudget.lean",
+      "bytes": 8812,
+      "sha256": "ba0ccae5de777b45b88529a986144258fc5e8a1d146e6356e619cb2c662da4e2"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPhaseFrames.lean",
+      "bytes": 8475,
+      "sha256": "6e447b39a0eb7eb9b6ddbbe82e202fc53bd5ed1b2cad1e4c39040b4271a439c2"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPostCertificate.lean",
+      "bytes": 6802,
+      "sha256": "aa2965c5adb7602121a44ba9514d7b5484b3f820e55c3456943816eca06d63d8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPostMemory.lean",
+      "bytes": 5687,
+      "sha256": "8c598d650fee44d45e27eb2475780a8694c692d55baf71f4411704d1eedd7c0e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPostResources.lean",
+      "bytes": 5743,
+      "sha256": "9a972d7746882a61bff6bb0925b911e249272f9a6b8d6b71e4e8e9bee7ec3eb3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPostSelection.lean",
+      "bytes": 6345,
+      "sha256": "77367e79e4eb97109e02d5f9863b0b7039dc2b86127068abb42b1486149da111"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixCommit.lean",
+      "bytes": 2382,
+      "sha256": "e97af380095c90553683e4e4258d0ed4c0e1478f35d9c8295e67a2b75817994f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixFootprints.lean",
+      "bytes": 25603,
+      "sha256": "4fda350de34cc2ab6c1e5700d4d22571e571249ad6b33b1065f02e3ba585ef12"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixGroups.lean",
+      "bytes": 5198,
+      "sha256": "0c8859a0d5b6c88ad482f39fe16666606c3a5a84dfdb030d59a1cd3cae2b454b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixInitial.lean",
+      "bytes": 3476,
+      "sha256": "260985361e215401f9ee6c83de6e924d84e9f913d87baa8369b7a0695541036a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixInputs.lean",
+      "bytes": 11565,
+      "sha256": "bd2996210d9f728d19a12cf2394ee50dbfdb4830ad2180fdb52856e54494aabd"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixPairs.lean",
+      "bytes": 10540,
+      "sha256": "8fcb60daa94dc689d0dd19f268cd07b3b2f84c0440449d2b5660b6af0b77b106"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixPotential.lean",
+      "bytes": 3171,
+      "sha256": "55cf133ad45141424813f4f73e8ecd8156c10aef659ee1b9886ecf1d435e68f8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixPrepare.lean",
+      "bytes": 11406,
+      "sha256": "8fc0d88cfe024ef2fd7c8cc6018d5e2ecda637b5a4118f7c5e8b11d040cc6d8f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixPrepareAllocation.lean",
+      "bytes": 10555,
+      "sha256": "1cabf1b48130f57ca15bd6031344b1d650cccca880ec8cd66e5243ea62b6699e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixState.lean",
+      "bytes": 17111,
+      "sha256": "2fdb92aa1a8daf152dc167a60968276941b639c4703f67c612956cf709a5daf9"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrefixStep.lean",
+      "bytes": 7130,
+      "sha256": "5cb08b2afa254f2f1282650e2e615f1875492087bd115c0c42d1af2d92e21e08"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPreparedMemory.lean",
+      "bytes": 3736,
+      "sha256": "3b177de2cb645138ca4e0dbdf46797355fba26758318297acce2ab1b57d6af7c"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaPrimitiveBounds.lean",
+      "bytes": 4273,
+      "sha256": "7ebf069622b9fd30ab98532d3417dc1c00f833f0e1b11dea13fc2229228c19c2"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaQueryEncode.lean",
+      "bytes": 3121,
+      "sha256": "3e7932f8f6839b50f68ea7fdba6b8a5bbfcf1fe8ef44a51b9a5cf590d6688232"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaQueryModel.lean",
+      "bytes": 16682,
+      "sha256": "bb1628f37e1f8825c0b387cc9f9dbb2494f3ca94c1ba7814689521b3297ee2c3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaQueryNative.lean",
+      "bytes": 2668,
+      "sha256": "5f6eacbca89527d9cb62b82b94e272018921a0c87618c0d63303d04292ee2147"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaQueryTime.lean",
+      "bytes": 3222,
+      "sha256": "015a68abf6251a84e1015bef4161167213df8d18e13cc6544446a7565d67eca3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaQueryTimeMonotone.lean",
+      "bytes": 3394,
+      "sha256": "db4f1d7d34825a43de05e345874c82a0b2e6bb08832cc87023b632198c6b38b6"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaReporterBounds.lean",
+      "bytes": 4861,
+      "sha256": "18b6340f74982685fb5e35752340358a3ec46b8b845a460757255814674c6a53"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaScoreScan.lean",
+      "bytes": 7538,
+      "sha256": "32e15582600233ec9fecf685a6a36b979108093304ed48411ad390022a5ceaa5"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSeedCandidate.lean",
+      "bytes": 4653,
+      "sha256": "0bab1ab7bb9769949fd3326b0aa09a1a383eadf21270fb73b65ca814a2e9b4e3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSeedData.lean",
+      "bytes": 9984,
+      "sha256": "6e6f65d33f75bdcc4d7e897af4bd8a9612165cc6332beea66585816a3a437193"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSeedDataReads.lean",
+      "bytes": 4862,
+      "sha256": "17b8b8b66ab3fdcc8d4bcaa7523fcc9064a89c447b898240f2d18f5af9aa3d05"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSeedPrimitiveGuards.lean",
+      "bytes": 11714,
+      "sha256": "e25125a2bd69834a4a94b6951d49307bb71f72c4bc9e5fa4ece8e29684374093"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSeedScoreReady.lean",
+      "bytes": 14525,
+      "sha256": "1b3f2377fea9ac1223bf7e4aee4d94a091a3556dac9e3528cc06cc06fd1e9318"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSelectedBudgets.lean",
+      "bytes": 8103,
+      "sha256": "465bb11850aad14e3d92c3e1eb2210a84794f948b2a2edf839f53d45f469a813"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSelectedCollisions.lean",
+      "bytes": 2261,
+      "sha256": "64ba9f02e19d9344f237432357706a06322ec4c756caabd85c450b41546ee508"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSelectedSigned.lean",
+      "bytes": 7067,
+      "sha256": "32e92ca07b86d8347982223f8c59069348ccbe8e5aea7f03a5d1380de92d81a3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSelectedTerminal.lean",
+      "bytes": 4109,
+      "sha256": "0d29bd0d002ce78ed28b94613ce208a330e91b11208b685a52807d84cd98eec8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSelectorAllocation.lean",
+      "bytes": 5090,
+      "sha256": "09e17b6ada774947eca987853120a18153d472e1b5206b46038d97d6b794e8b5"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSignedSelection.lean",
+      "bytes": 5353,
+      "sha256": "bec72d1701dcd6f304d9f766180c9375fa82da8f63fe076ef8a057b0ea871b8b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceArithmetic.lean",
+      "bytes": 3566,
+      "sha256": "25b82451567a0fd995eac255c753d2eb5ebc7b90f414ebd48bf1175ad634d5ed"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceBounds.lean",
+      "bytes": 8174,
+      "sha256": "6d8807fcad97438d01a5dffbb10736d88c3f282a365896dfc0e384181ccf6a17"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceCertificate.lean",
+      "bytes": 3260,
+      "sha256": "13b1a815d697d262ff8e232e9598e76dbf73c9b5e962c9024340ce0cc53a60ce"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceControlBudget.lean",
+      "bytes": 9274,
+      "sha256": "a5713f7fd0beab51dc190c8c9bb7aaea11c2bfa176e0efd5deb2a12c45d04f19"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceControls.lean",
+      "bytes": 5571,
+      "sha256": "c988819e4f603b4207f64272bdbbc6002327d5b5d30387088b2fec9b7c10a08f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceCountSeed.lean",
+      "bytes": 5167,
+      "sha256": "684946edde55562534d406f0f44b546e1a251c864a4ccc47d1c3737255e43ac7"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceLayout.lean",
+      "bytes": 3193,
+      "sha256": "dd145f23bc4d0a83d7cb88566af7643d71cc21a06df8ec652fa6c271bf9cfe81"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceModel.lean",
+      "bytes": 4306,
+      "sha256": "5e3ae6760227c7fd01c04d5aa98d49c653ff8f6ecc83c314efd4b10dfebbefc3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceSeed.lean",
+      "bytes": 8591,
+      "sha256": "e6e5981808649e990c51adb7397fb3828cd0864db8125ad8789f9c1bf70cfd33"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceSetup.lean",
+      "bytes": 5390,
+      "sha256": "cf0b5b13aaf4b1916e5df98a23d251ebab11bd8a4573b5c9f587eae3de8c2d41"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaSourceValues.lean",
+      "bytes": 4279,
+      "sha256": "460f52470ddc9925c754c66e7cd452ce164d67abbfaa45f5107c3e3bb63caad8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaTensorBounds.lean",
+      "bytes": 4886,
+      "sha256": "20cbca1ea07b45ec0e5b9891c22d4d84b8da38609a33d73a2e854cdf54c97349"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaTensorGuardAllocation.lean",
+      "bytes": 12430,
+      "sha256": "c786bff5b962e848ed6c1eb4699cd72d8ee2052e3d6778bbc23fecfa3f4123b0"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaTensorReady.lean",
+      "bytes": 7527,
+      "sha256": "47e4adecddc1e4f207a88139d552dc3f5c9f7b77e7196740592c80643accf682"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryArenaTerminalReceipt.lean",
+      "bytes": 12216,
+      "sha256": "ef32f6eb1553e7249e3e3b577035321b924823d10a7c006f02ace163c16e4f40"
     },
     {
       "path": "Submission/ThreeSum/TernaryBank.lean",
@@ -3091,9 +4458,59 @@
       "sha256": "d3e1961113946dd7d322a2ea9bc5b4ce7c08c12cf697489b0cb25d754b6350f7"
     },
     {
+      "path": "Submission/ThreeSum/TernaryBankCanonical.lean",
+      "bytes": 2718,
+      "sha256": "c2bb7888a6a062233d6766d526a08f19854e168298e9794c7e59d934f6e76dde"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryBankEnumeration.lean",
       "bytes": 2996,
       "sha256": "c0e6bab6c7993365fa1ed870602a28d67d808532964ab9ac3856de47fb2373d7"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryBankStageModel.lean",
+      "bytes": 5333,
+      "sha256": "554fd49659d42cb2165badf43cedb97792e2d196ea39f53c092640d403b35967"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCanonicalDictionaries.lean",
+      "bytes": 5167,
+      "sha256": "30eeb92345343020800d61219e5d1743b2291ccd8555d2141679b810091a50e4"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCanonicalFibers.lean",
+      "bytes": 7267,
+      "sha256": "fd1ccc40b716354e262d0df9c7d769932fa5a3d04901f384282cbdb939038a98"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCanonicalNativeCompleteness.lean",
+      "bytes": 6371,
+      "sha256": "b447f2441f7ee3a31ce7c316748e1c48ef1e6e745ed770a61108112c7996e56e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCanonicalSixTables.lean",
+      "bytes": 2294,
+      "sha256": "050379de4a96a5c9592f4cc574c1bb541fdd1e5199c9f898c34f7a3cf039e158"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCanonicalSourceBank.lean",
+      "bytes": 9660,
+      "sha256": "1578c8c0a2ee4a4f8c1a57ed2631de21f56c83d025cb45af528d33b2105c0326"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCanonicalTupleCodes.lean",
+      "bytes": 1945,
+      "sha256": "3b16fbbf74eb8fe48be2f4040fde4241c78ea95e27bf82ac44d39991e92d8a5b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCanonicalTupleSemantics.lean",
+      "bytes": 3759,
+      "sha256": "d0f5c5cd613da62631bc28475cb548aa99ee439f41e27e99ff458d3479fc487c"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCarryCode.lean",
+      "bytes": 4852,
+      "sha256": "95092f3f76c19b53dad1058a38631102c970b184d8c709a9f88af03caa2fb66b"
     },
     {
       "path": "Submission/ThreeSum/TernaryCodeSemantics.lean",
@@ -3101,9 +4518,184 @@
       "sha256": "cd7ec3d3476244ee0b6aae9a44e7e5150957c205962979c1303bf1d2f0225a7f"
     },
     {
+      "path": "Submission/ThreeSum/TernaryCoefficientCodes.lean",
+      "bytes": 3111,
+      "sha256": "2b165eab1ec1aef12d7410bc501cfedac6663340a8aa7240f2e26794dcba6c90"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColorPreludeResources.lean",
+      "bytes": 5308,
+      "sha256": "3f0bb7e23628d12b5716980ebdfc464ecaa6946a598a9ada66b5a72c7ff7f1df"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColorPreparationLayout.lean",
+      "bytes": 3044,
+      "sha256": "4ef5de3e338ffd2bf4926597e14bd336c65cfe425223c2f998c0bd1ee45f9067"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredConcreteFinalCall.lean",
+      "bytes": 5989,
+      "sha256": "e523b586be9f2204c718507ac5eff452c1a9635289cd4aae494b54c44d077613"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredExecution.lean",
+      "bytes": 5970,
+      "sha256": "5c4c1a21fe1c0e5fb3241d8d21c635e9cca4ade42a93d8c6f46602ad7d72b88c"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredExecutionTime.lean",
+      "bytes": 1042,
+      "sha256": "93926a6d26df2bb9252ffa9ef8533eb2764ce5b37342fd3404e3677ca6b39b7f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredFinalCall.lean",
+      "bytes": 5422,
+      "sha256": "eed0c613c335ed3f8ee12f8e62a727badcdd8fcf5085cf3b79d1162196417292"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredFinalReady.lean",
+      "bytes": 8889,
+      "sha256": "bb46afde9a6a038da40edf2cededc0e1e74eaae4d7e613a5312a14d2547c0b14"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredFinishCall.lean",
+      "bytes": 6225,
+      "sha256": "e13067bf0adf2cd4b50806f52d453523b2b928aac2b83653445c30b25a4ab5ec"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredInitializationResources.lean",
+      "bytes": 2581,
+      "sha256": "ceb1161ecd963b0977a86bb1a379be60c7cefc5edff7b825a0e0fd58e10dd281"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredLookupDepth.lean",
+      "bytes": 2279,
+      "sha256": "d8c2a469612a5d8700fffc5160f5d50b862d6a3433a453dd3fb2adaa91ed4ef9"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredLoopABI.lean",
+      "bytes": 2810,
+      "sha256": "21788e35ae073dccfd7c2dced8cfcb21f4616041baa5158fa7a91950257bb6cf"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredLoopAllocation.lean",
+      "bytes": 4593,
+      "sha256": "8de7d3390b505663206067bbaae579c7a74ddb4036edcb9ff90225ec585f0021"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredLoopAllocationScalars.lean",
+      "bytes": 4383,
+      "sha256": "b354c5fbb1016e4d610e12975dc33d8242f41d4d1d38b3129d28da67e026024b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredLoopCall.lean",
+      "bytes": 8689,
+      "sha256": "af1124b07e1001660fea6063c3d3b9184166982c03367a680b3c5264d21801ea"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredLoopReady.lean",
+      "bytes": 4235,
+      "sha256": "104426d6232f5c4e707aeb3228cc230c6a08bda6357234e2859f1a853d80484a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredLoopSetup.lean",
+      "bytes": 7705,
+      "sha256": "0796b5c9dc13c869c1dbfc6b704c1aa54835d64f5bbc890ee8ec60c7ae04b131"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredNonemptyExecution.lean",
+      "bytes": 8005,
+      "sha256": "6fffe18eb8c8207f3952c5acf58ef54d55f420ebc17c3d38f15e80b57b0c1f50"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredPostABI.lean",
+      "bytes": 10470,
+      "sha256": "3dfce2419b73af84a77298f08f9a672cc07f5f2590e984a0858e123b62a7f06f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredPrefixCall.lean",
+      "bytes": 2644,
+      "sha256": "e10fc4cc5f9fab33002336334f44159e501d6c5d9147030455d9da5688a407b5"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredPrefixRuntimeIdentity.lean",
+      "bytes": 4493,
+      "sha256": "2a73d0c781e5b14a7e049d39061107b67ecd1bf521ecee9a45b3ef7cfeb8432f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredPreparationCall.lean",
+      "bytes": 6854,
+      "sha256": "3b4609a501584b8b9ec4fd0ec7276a24a5ebb17588c1e92376e2609f6a400a30"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredPreparationFields.lean",
+      "bytes": 2892,
+      "sha256": "2d3e43c7688e6bf10f292676cab32ea8c7d9585bf089b30f0fc59e4120a82a09"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredProgramIdentity.lean",
+      "bytes": 4758,
+      "sha256": "aa30b232d6050cdb146ef62bb0bd7069ae44307f9954ff633685f7b56a7ab24e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredQueryBudget.lean",
+      "bytes": 2148,
+      "sha256": "66c5051630161659b217628ba077e49fb2bf63042237bd8cda48b45523edb393"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredRuntimeBounds.lean",
+      "bytes": 3429,
+      "sha256": "e30ceb01197c3b262d8f86280135fab068f1e5b48f61b11dae742840a873fc2d"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredRuntimeCertificate.lean",
+      "bytes": 7323,
+      "sha256": "fa4f8546500befeb597bf552c366dd7452bd39dfe312e2db2ba90e6c8af80e11"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredSeedABI.lean",
+      "bytes": 2594,
+      "sha256": "43c854d24dfbda2780e7099c964eb5339d6d97c803279255e890b28c3c0a960a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredSolverNeed.lean",
+      "bytes": 12260,
+      "sha256": "c04b8e0c62f8a36149964ce295989ad9356572347f128650cea50e36b2287def"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryColoredTerminalReceipt.lean",
+      "bytes": 9860,
+      "sha256": "6d7dfd83113f29125989ff56bda171c274c4a4c6d3902653b5c751d996593404"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCompactPairedSupport.lean",
+      "bytes": 5582,
+      "sha256": "c80c813fcd36a25ec2a4b9aa5f94ab6d5a85d6e7579bdccdfb15e8e9a5e7bb11"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryComputedExtensionMenu.lean",
+      "bytes": 3157,
+      "sha256": "0d7331a708cd30b22bdb9165ee151baa0c4764450a096b23c39812b282d07259"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryConcreteProfile.lean",
+      "bytes": 5379,
+      "sha256": "4dc1ce163cb92771e3ca9d85935a41b1e1f0bb4b2f870c6e6b1237353be35df2"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryConvolution.lean",
       "bytes": 13244,
       "sha256": "25b40f5f467157e4f3aba1587f25261d2054e10b60d75edc4545296217c3f306"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCountExecutionFactory.lean",
+      "bytes": 5438,
+      "sha256": "15bd5536555e9cdbd86bdd87690f2931e9fb01b14efcb894ade36e8b9420bd3a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryCountFrontendBudget.lean",
+      "bytes": 31271,
+      "sha256": "71a4c7e4cba3010af9f775755a4e6cbc5e170197ed85defc0f5d11673d13a8d8"
     },
     {
       "path": "Submission/ThreeSum/TernaryCoverActualMoment.lean",
@@ -3221,9 +4813,19 @@
       "sha256": "5402d051d73be9668d1ada7fcb59e46415bb7b0e3978ca19327bd6b36fe9b2ba"
     },
     {
+      "path": "Submission/ThreeSum/TernaryDimensionBounds.lean",
+      "bytes": 4179,
+      "sha256": "79cb51d904e7fcc28f8d6be8c453121ed77666768f8ef32dc9a81e1b9913c002"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryEndBridge.lean",
       "bytes": 3656,
       "sha256": "39011ea40d3884eb7fbf32cb5dc009f5e128e9dfc9af9d6d31db158e5da22d03"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryEntropyRates.lean",
+      "bytes": 9186,
+      "sha256": "ebd5eb3714f36fe0ebe461b8c9a6e56d564d8574bba1aecfd0922c81f0f2513f"
     },
     {
       "path": "Submission/ThreeSum/TernaryEnumeration.lean",
@@ -3236,9 +4838,89 @@
       "sha256": "1f5dae5afe7b68331316840bdc774225e995f8ae76cd9c0c754461ac4e4febb6"
     },
     {
+      "path": "Submission/ThreeSum/TernaryExecutable.lean",
+      "bytes": 4137,
+      "sha256": "0e44f25c73a73346e356790d2fa190ac23e165134a981b4b955f6afbb4ebbd4f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExecutableParameters.lean",
+      "bytes": 2871,
+      "sha256": "b4f25d2c29ed745eb95f413dd1613492c1521461d3bf92d03923a6f2ddceeab4"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionBudget.lean",
+      "bytes": 2605,
+      "sha256": "79a829abebcd71146752f9f8db83b9ac517cdcb36465b7f4f595f8c816e50e3b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionCandidates.lean",
+      "bytes": 4150,
+      "sha256": "f7455bc7f4c30a001512c39fd8a7e44634eae7c30c89cae2d585baa7b6b594c1"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionCheckerSemantics.lean",
+      "bytes": 3869,
+      "sha256": "7765381ef1a2cff05d953f335122bbb2814a0381786c0243f947e3a342a38888"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionDecoded.lean",
+      "bytes": 1879,
+      "sha256": "7d068acc4c3394acb31745bb876ec7b510f6c0914a0b1b3b7acb2dc77c449e94"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionEncoding.lean",
+      "bytes": 4391,
+      "sha256": "8f774229244505f80fe82909e512fb4456d977a81cfba2888a8729804b0e3e2f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionProductSemantics.lean",
+      "bytes": 2461,
+      "sha256": "c43e6ed3ed19f717c5f43e83c6f3164b6f945c56d06c416ab381569634637c95"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionRelations.lean",
+      "bytes": 4588,
+      "sha256": "fc5314ebf599a0f14814392930ab0ec3ec6cd210a65f30c23848152a2f0c2a17"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionSearchCorrect.lean",
+      "bytes": 3312,
+      "sha256": "546cd9977dcd5b89fa52794f3005e769a65ed73a6344c0ed470da54350e9794a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryExtensionSeedSemantics.lean",
+      "bytes": 6088,
+      "sha256": "44b97e36c403f2c61dceae6bcc8291001d8a3b6f091129b9f6f2a872f027ac6b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryFastProgramBudget.lean",
+      "bytes": 2107,
+      "sha256": "57650a9cd80ddde4fa5204213bf0fdadd197392e9f5f54c1b06a77cb1ded7cde"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryFastProgramResources.lean",
+      "bytes": 6453,
+      "sha256": "913df9005ba557b3968afe2259e283db037e05eed3269a3f76593569d7cf3b4a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryFinalSolver.lean",
+      "bytes": 930,
+      "sha256": "a628af3b8adc8136bb54d384b6706b699e5a1ab7916e6082ecc077b5deae98db"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryFiniteLedger.lean",
+      "bytes": 5086,
+      "sha256": "c5ca4a9ac16d3fb235d5aaa9c653c49853e8d084d0fa4a428f5d37b322fb16d9"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryFixedDictionaries.lean",
       "bytes": 14384,
       "sha256": "174687e77d6bb30176b6f185bd081a6d7d591b980d0226051cc3486678843a49"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryFrontendResources.lean",
+      "bytes": 17608,
+      "sha256": "a632f26b60bfb6ebf8dadef3dfb9797e513f0fd8e2514c388decd18e138d44ed"
     },
     {
       "path": "Submission/ThreeSum/TernaryFrozenQueryCost.lean",
@@ -3254,6 +4936,26 @@
       "path": "Submission/ThreeSum/TernaryGlobalEncoding.lean",
       "bytes": 10144,
       "sha256": "18e19d7b8542a19ec9546b92705655359279182d5b08fd4d2b1cb828021f9742"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryGlobalPreludeResources.lean",
+      "bytes": 6622,
+      "sha256": "9fcb55eb1db2a015510f7c2eacb94b4807489d3854fe2ee1dcadeae3a51e4fa8"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryGlobalPreludeTime.lean",
+      "bytes": 4697,
+      "sha256": "c2e2934febb3540344358679ee083660abdcf879b44763fa37047420bfc4b40a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryGlobalReceiptTransport.lean",
+      "bytes": 4403,
+      "sha256": "77246e4a70ba2c52507667c227f517f1ecba20906f0192dbd7324df57644df41"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryGoodOutputCatalog.lean",
+      "bytes": 12104,
+      "sha256": "ba55bef45c58fdadc9d1a4f57f9d64601c0008cc3f16cae8dca2b647e11b9484"
     },
     {
       "path": "Submission/ThreeSum/TernaryHybridCore.lean",
@@ -3286,14 +4988,264 @@
       "sha256": "a2d6016d2ef11fed0e640e1dabf934621e89b647e3e648972ea7aa508602138e"
     },
     {
+      "path": "Submission/ThreeSum/TernaryMapGroups.lean",
+      "bytes": 2912,
+      "sha256": "0ea26d5fb50f5656ceaeeac88ec490531e91d5e6b927ba9f1e7bafbf00c4fd53"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMomentChannelResources.lean",
+      "bytes": 4515,
+      "sha256": "177587ee78a39562a29cc1edcd364a7a13ece9cbef15291b1e9fce65508d7684"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMomentDetectorResources.lean",
+      "bytes": 6256,
+      "sha256": "2b98a98143c53a39ba9be6e757e2b79ed59392b907dcb3f613afa4ff3da9ef06"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMomentDriverResources.lean",
+      "bytes": 3299,
+      "sha256": "08bb05f22ef2b878b07d4a9426022f7892dcaf925a55ed2a9572fe5f6348f748"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMomentMatrixInvariant.lean",
+      "bytes": 3820,
+      "sha256": "0c6c26d2065dd43a87288909b8236a50a206fe044c4ad3ca65213b37bf54af54"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMomentReporterBudget.lean",
+      "bytes": 4854,
+      "sha256": "f7de4c30ee327e1aa15d0cd6f09260b391b1e8d9596711ef9eab8416538cb907"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMomentSchedule.lean",
+      "bytes": 3936,
+      "sha256": "e14262677217665e58ef7c1c6d5656c5ab75bde67b5faba8a69fefe414e21aa9"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMomentWeightBounds.lean",
+      "bytes": 2554,
+      "sha256": "bf19129679daa15b184f50715cde8792ede765538f45ccb501fa6defe1ca3058"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryMonicCodes.lean",
+      "bytes": 2308,
+      "sha256": "e6015f848f37a426eaba31f758684ede7dc522575b5ca06362b5599d1f49c268"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativeBlockPairs.lean",
+      "bytes": 3100,
+      "sha256": "5b0bea72ae53da45fa2bfc85d731c8d2138dd168d3ddc04eef05c1fc9eaa065e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativeCompleteFrontend.lean",
+      "bytes": 7596,
+      "sha256": "0301de1b2b68354cacd044170ab651807ee06795f70ed6b96a8f17badedcb691"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativeCoverWitness.lean",
+      "bytes": 5546,
+      "sha256": "ce53e4e006201fb47556ff5e132bd8e9ca0ede1aa28074c61182be2ad03a6799"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativeMomentBounds.lean",
+      "bytes": 10249,
+      "sha256": "f2662b705c843c91f7f7fadded67ab2225ced3811f5bd359945b770473823b02"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativePairAccess.lean",
+      "bytes": 3167,
+      "sha256": "20baa17e79383cadfa00101f45934989ef404847eee1a4af72c17b96dd360e40"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativePairMoments.lean",
+      "bytes": 3852,
+      "sha256": "3d4c7449b6166c4c1d68023516f36cc881a90ea6a7e18fd1ef42054ff9bfd2ca"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativePairedLineage.lean",
+      "bytes": 2767,
+      "sha256": "62155823d7be1e8b3cbdbf29b846fee787ef7a6ce95d95651598e4b5b7cd7e89"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativePrefixLineage.lean",
+      "bytes": 5838,
+      "sha256": "41d82b38ba1385291969e6274371630e6ccaa6f56099cabd0723ff808463cd97"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativeRequesterCoverage.lean",
+      "bytes": 2883,
+      "sha256": "9a6b461d4ce5234e4f1e19b2900def2f19d56d895b6da68657255023881886ba"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativeTensorScore.lean",
+      "bytes": 5416,
+      "sha256": "714a47d27987aa847ff52c730812034e4b6f252e0f072812df1b4cdb371716e5"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryNativeTupleWitness.lean",
+      "bytes": 4699,
+      "sha256": "2163e9182e236bbe2ed75779c2150ffdc10345d6feaf981012dc3fa45bccef6a"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryNearBankEnumeration.lean",
       "bytes": 3571,
       "sha256": "262e1c75ccd9aa373f6e8eba7e9b948f32631c9efef8f38ca199ad8124409ddf"
     },
     {
+      "path": "Submission/ThreeSum/TernaryNearCanonical.lean",
+      "bytes": 4539,
+      "sha256": "1ec81fa064ce6aafc0b385c230640d9e13f4bd7ce81c06cb615813850aacfa7c"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryNearEnumeration.lean",
       "bytes": 8000,
       "sha256": "43f9da0a9f24e7e4ae4dd3b227a0cb4e0c0dbbca1c18d1f4e2ee8bdb8bdefc29"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOriginalAppendSemantics.lean",
+      "bytes": 3668,
+      "sha256": "28a17beec0f1bd36c8515bc9737861fcfc13921bd7d90f25349c332fd84b753d"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOriginalCollisions.lean",
+      "bytes": 3796,
+      "sha256": "433e0880cbebb19e88900021ea16269a14ca4673f1dc6a48501ee5c01db30c1c"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOriginalKeyCodes.lean",
+      "bytes": 4187,
+      "sha256": "60167b856b0dc32e7a74790904bbe9c21b8452f06415eb5b8fc2fc8b5f46f282"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOriginalRowMenu.lean",
+      "bytes": 12319,
+      "sha256": "851f88e341a20c1c0b4edfa6bdb1c4b21f150ddb1f72e8911b6be58938d1affe"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOriginalSpan.lean",
+      "bytes": 1881,
+      "sha256": "fc0b4de69a767846eb59309148d12c0a092704111546eff581bcf79d41e8bdab"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOriginalSpanCatalog.lean",
+      "bytes": 2040,
+      "sha256": "3859d95aac1b556b9c8c5002f68f88f8bc21941bb804591914ab428e5634c129"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOversizeDimensions.lean",
+      "bytes": 11713,
+      "sha256": "05a6df83a57568d0ef328bd9e1229660e8de4bf306b33f7c39b642ff349f552c"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOversizeOverhead.lean",
+      "bytes": 15663,
+      "sha256": "00ac98b9b82b3e118379b932abc5ffe3986e54aa61110183470d946e4f4926b9"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOversizePrime.lean",
+      "bytes": 8661,
+      "sha256": "2424847164bc9e392aa4c1ca204c997590bff2fb123bd32cbe5c62637e103145"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryOversizeRates.lean",
+      "bytes": 9697,
+      "sha256": "c718c0ba48c99aea56807aa4787c8d047e204d77385879cee6cc0ea6017cde1e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedBudgetCollision.lean",
+      "bytes": 2270,
+      "sha256": "84d3c041f3238f6cb3398dbdb9962895276afd8124b9579704b36d7c23633aec"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedBudgetSelector.lean",
+      "bytes": 4940,
+      "sha256": "7ead702f1a9e15751b2420799229226fbee2741e8f9f9b6dd13b87ce5bbd99d7"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedCarryBudget.lean",
+      "bytes": 1843,
+      "sha256": "7c666249d5c1a512947181c00275bccccb9d80fe8f9a316e212b35b4ebb28b9e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedCollisionRate.lean",
+      "bytes": 5625,
+      "sha256": "5a8f96090f77a6e075a42ea3b518dcffdd793eb0f7d125c31bddd4d4162533ba"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedColumnEnumeration.lean",
+      "bytes": 1886,
+      "sha256": "153cb5bc4fee7c615779e24b41bce2fc49cbfbe9e834241049f5a61089d43d12"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedContraction.lean",
+      "bytes": 5156,
+      "sha256": "2260ede1d2bcabb5367ad4af04d0fc0a98be376ac83f91f2bc859a145ac3084d"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedFamilyMargin.lean",
+      "bytes": 6012,
+      "sha256": "bc7aa7ef451b1858e997cd61ee6c163dacf023fb08b909165dbd482d813d8c63"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedInitial.lean",
+      "bytes": 2914,
+      "sha256": "2196ce77565b534a5afafbd220034ff5073fdaa640e4256622e8a2541bc0adea"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedInitialBudget.lean",
+      "bytes": 1612,
+      "sha256": "33210a79e05af0387722feba9671f0b8ea84fbb08dfe25df0a11f66eaa966a73"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedMinorReindex.lean",
+      "bytes": 1649,
+      "sha256": "9f983319cff354e2999ee1a27629f53c1ddbf6a2cc104a7e67497c88c6717c47"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedNativeDrift.lean",
+      "bytes": 1774,
+      "sha256": "e1ab70a986d75421cca9b14f93075e882031359c4315b844196c2552714d38ef"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedPotential.lean",
+      "bytes": 6603,
+      "sha256": "36ea150cce2c4ca1c40e37abc17a4818a4c82b67ac0ea46a5c3927b1df292e09"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedRecurrence.lean",
+      "bytes": 3867,
+      "sha256": "51bb8c42679e65dda4e043767b9919f1f3f84f45b6519ab28355a18bca7c490e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedSelectedChain.lean",
+      "bytes": 10345,
+      "sha256": "bcee7ec11d88af66cf4c797c885bcd8b72b6ec3dd9f8298a44588af66ebec805"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedSelector.lean",
+      "bytes": 3873,
+      "sha256": "9bb5ea05345f31b8439a074740572cdc5e664b51654cc37e024b256543846ad5"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedSupport.lean",
+      "bytes": 9662,
+      "sha256": "b0c6eda7090232dd64113d2421d97e420f608ffdd0e9110713b2b060f2f74176"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedSupportConcrete.lean",
+      "bytes": 4572,
+      "sha256": "52e14529c93ab47a0aeccfcd4c8d2d9f229a687b237deeaaf4605135b74a0eb5"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedTensor.lean",
+      "bytes": 5020,
+      "sha256": "ae7e3b6188edc19a5e163cd823435a5d757b6efdf6fa42c572f57701e005ca74"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPairedTensorScaled.lean",
+      "bytes": 2992,
+      "sha256": "6ba2f31bde59d593de136ca109e73902af40a551c7940b49d8dd13995ff37947"
     },
     {
       "path": "Submission/ThreeSum/TernaryParameters.lean",
@@ -3311,9 +5263,94 @@
       "sha256": "3ebd20df09391c341ad71d02b3ca186f9649a18626eb823e1fadc423fd25c058"
     },
     {
+      "path": "Submission/ThreeSum/TernaryPhysicalDigitSpan.lean",
+      "bytes": 6206,
+      "sha256": "bbfb4ea8407a0e95081e56f12ee753229ab9281b522cac5d838413f403dcada7"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPhysicalEuler.lean",
+      "bytes": 13322,
+      "sha256": "3b0b67a589520b24be8915d75777fad7857bb63e8b4d2af36272ff324c341031"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPhysicalMomentSupport.lean",
+      "bytes": 3081,
+      "sha256": "359ae5f2b36c89d6235424447be99b4861e9f11cbef906a4eba7759f42deff08"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPhysicalPairWordBounds.lean",
+      "bytes": 5140,
+      "sha256": "7ed02091636faa7a67951c871ec25ce5b799f09e907bede9e7b14bf6939b4eb2"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryPhysicalSources.lean",
       "bytes": 4712,
       "sha256": "cc691f2d6a8d8dfe9b01a21939294de51036c1883b8a09a9d4a6c1710850b5e4"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPhysicalTensorChannels.lean",
+      "bytes": 2311,
+      "sha256": "3460dc5d695d93868ac7c8fa326f20fcbc1501c995ffdc44f5b47234a469121f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPhysicalTupleRecords.lean",
+      "bytes": 3032,
+      "sha256": "ddcd4b2828bfedbb9c260a9875f302a9a91550bace457333d613ef0f257d0b83"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPrefixHeaderSegment.lean",
+      "bytes": 3068,
+      "sha256": "7fc490969bebd5b642959520bc117c9bf7909dbdf9093cc07d573c23ba030e55"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPrefixPreparedHeader.lean",
+      "bytes": 3227,
+      "sha256": "c204caa9678ff29aae9f36dada654807930922b7a969363969aebcc697f04aeb"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPrefixProgramLibrary.lean",
+      "bytes": 3027,
+      "sha256": "deccc63028127dddc7d1740d7a27f5cf88af604113695dd624436b280c7a6e59"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPrefixSeedHeader.lean",
+      "bytes": 6654,
+      "sha256": "a7eb7ba0a5c5299a0d35487c7788df838e0ea7513ea28e7e27f0aad0636271b1"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPrefixSetupResources.lean",
+      "bytes": 5139,
+      "sha256": "02a7895c35cb4c93aae98790afa214a3afa056869857f1ef478450cd9dab5493"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPreparedOriginals.lean",
+      "bytes": 11719,
+      "sha256": "9beba45689ef575d353a62e272ce6e38d91010f2670ae5c7c8abc0b2658b5185"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryPrincipalDimensions.lean",
+      "bytes": 10882,
+      "sha256": "6b2d773580d1a4a5fa8438f5939f745d7e3d665eed644ecd812e4970204efb66"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryProductCheckerExact.lean",
+      "bytes": 3055,
+      "sha256": "6b604f236ded7db62a5fd1dda1ad2eff5a1733156dd19e7946397f367d8a6d83"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryProfileFastExecution.lean",
+      "bytes": 1278,
+      "sha256": "a21934e5327c02345c23f7e85ea620291b767341cfc06811a78f2d0dfd9e37bc"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryProfilePreparation.lean",
+      "bytes": 3886,
+      "sha256": "f50173d4c2e86521c56e7b519c0fbda150bdada7c3dd69adaabe01846efe53ca"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryProfileRuntime.lean",
+      "bytes": 2971,
+      "sha256": "7e09ec9f50176070ca97a15557ec820e3d80fb23472512f0c77c61151a075753"
     },
     {
       "path": "Submission/ThreeSum/TernaryProjectionCells.lean",
@@ -3331,9 +5368,29 @@
       "sha256": "267ed5c6bcd233380a51f492790badf6e4a228e62176d3213a8d185735f08cae"
     },
     {
+      "path": "Submission/ThreeSum/TernaryQueryValueBounds.lean",
+      "bytes": 3194,
+      "sha256": "462bd38ceb1fbbc69d722ec46795f4548b6731275aa8b5bb7ecca05bebd28724"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryRadixOverhead.lean",
+      "bytes": 3235,
+      "sha256": "af24c92e5cc6f4cb526e2a008e193bc2af80084273302dcabd9aff68b4fbe994"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryReconstruction.lean",
       "bytes": 4313,
       "sha256": "823044cc766175ae1928a0123e7908bed593c718b20d57f94c196ea9f3570728"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryRepeatWordAddress.lean",
+      "bytes": 1927,
+      "sha256": "59388153cf201d8a8d6f1b8027ad3a7ccc953c52d7fc5e6954f53aa3bb085437"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryRepeatedWords.lean",
+      "bytes": 3545,
+      "sha256": "e2e7c6c72caadd7578deb01c13427f38ff5c52db7d5a29409fcfe5f7515e5217"
     },
     {
       "path": "Submission/ThreeSum/TernaryResidueChain.lean",
@@ -3346,9 +5403,114 @@
       "sha256": "2e3ea10849a8f9e4396a07143f6fc1bef11c534fd3b58261ec32bb3b3c327b74"
     },
     {
+      "path": "Submission/ThreeSum/TernarySeedCoefficientBudget.lean",
+      "bytes": 2771,
+      "sha256": "83445d2cfc4b773486d91b270d8a1187ae71144557701188736924eeaa1b0d5a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySeedScoreRecords.lean",
+      "bytes": 3322,
+      "sha256": "1570e24ba9ad3005132e7e614a493b02d66df56f1867944ce942afcc7dd482fc"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryShortLedger.lean",
       "bytes": 2340,
       "sha256": "9b510c5f8046a83e5a4d7cb72a1702ef0d4e49fa399918c8b7ef84d33b5779e6"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedDigits.lean",
+      "bytes": 5436,
+      "sha256": "ae3b7a636a22cd9e809e73e7e1acf5e5c8d05b671b44369df4efef129705438b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedFeatureHash.lean",
+      "bytes": 4429,
+      "sha256": "21f7eb0b549f4e30fa2bb946f3b55966e01847f37a58135689452a8fb0cc5174"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedInjective.lean",
+      "bytes": 2638,
+      "sha256": "422b08fece6464e0cc92ace8fce99c43ba5562b5923e1b49514c6b4333bdd49b"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedLayout.lean",
+      "bytes": 1777,
+      "sha256": "60f7f1c74b5469ebbe828989c545c696549e718080d9a3bb35cbe17e25b571d1"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedModes.lean",
+      "bytes": 7229,
+      "sha256": "fee02bbcf6e465662f4057000a9beac461fefc6c590c54cd447805390b8ce401"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedPadding.lean",
+      "bytes": 6230,
+      "sha256": "6c04e47e309d15ce10569af2d4e17a6d4776a72b52e74f514d46ddec12fb48c3"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedParameters.lean",
+      "bytes": 4354,
+      "sha256": "619234f540d4817409eb0022ded58a13e093839b7f03df4abcaa5f37993fb008"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedPreparationBudget.lean",
+      "bytes": 8599,
+      "sha256": "45ddb4b4543a211acc6900323b4313f2a958e0c5a943797a3c161d38d590fb25"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySignedReduction.lean",
+      "bytes": 4932,
+      "sha256": "09e06712a16281d00d6170227ff5ad42b7d74a1a371258a0165c2991ebbc1751"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySolverEndBridge.lean",
+      "bytes": 5756,
+      "sha256": "d4d96fbf60be40a435b1cc6b7ace1be9d74060403548bee1916b7d9e743753d9"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySourceCountExecutionFactory.lean",
+      "bytes": 6965,
+      "sha256": "977e56f47e81bd253ad4132b825c9dfae6cb6b800ed3567b3e3c31fbc3bfedd6"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySourceCountWeightSeed.lean",
+      "bytes": 4659,
+      "sha256": "163939cec39b3ccac06692603c412a95664efb956d7377efa97180457aa2a14a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySourceExecutionFactory.lean",
+      "bytes": 7434,
+      "sha256": "874c18a5e26e6ea67567b89be1b5a35f5e9c1092a13e4ef42ad09d3e5d9b20c7"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySourceHostModel.lean",
+      "bytes": 7664,
+      "sha256": "c32c2f75b16ab6f3b8f6f6e85f797d575f4be91d3bb7818c4df5b15478894a4e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySourceHostRecords.lean",
+      "bytes": 1582,
+      "sha256": "6c41eb8c936a56be54a6a560883e4fcffa4755ddacda10a7cd9e3f3abeb68a42"
+    },
+    {
+      "path": "Submission/ThreeSum/TernarySourceWeightSeed.lean",
+      "bytes": 5050,
+      "sha256": "a42527be584b2e27ed485e893b7524af994e09680c0ddac8c18ada96179f787d"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryStoredSpan.lean",
+      "bytes": 5060,
+      "sha256": "3d588de7a311bc365ce59661d176cd4dfff3370968d71de69b23a90aa47ef20d"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryTaggedMinorSupport.lean",
+      "bytes": 2706,
+      "sha256": "ec678b190a28831074dd37f5a4352f9428f81db85cf32155e0a109e8e2329c47"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryTensorWordResources.lean",
+      "bytes": 6009,
+      "sha256": "7ad077992974ce50055b84e13212f1ee07c1460f203df44da4fcbf57662fcc6f"
     },
     {
       "path": "Submission/ThreeSum/TernaryTransform.lean",
@@ -3356,9 +5518,94 @@
       "sha256": "c037e7687c9e4eff9d2e24236827de8ac973a9c1c2ca189512fcba3c6453d17d"
     },
     {
+      "path": "Submission/ThreeSum/TernaryTupleDictionaryDecode.lean",
+      "bytes": 2232,
+      "sha256": "e4259e1d974d24efc7ae4ae999a29c36a63d05e591303d6409cce178822f9886"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryTupleDictionaryLookup.lean",
+      "bytes": 1682,
+      "sha256": "11cf50466ce6e83175533f36ada8b4221e80353d1408dc379036bd81ee6c84de"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryTupleWantedLookup.lean",
+      "bytes": 3169,
+      "sha256": "39d0086d9bc2dca6d4136e42355a914f253fa36d066d965479b5fc72918a3aee"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryTypeCardinality.lean",
+      "bytes": 5869,
+      "sha256": "59cf7b7f5b68dd3f66559ae883eb0724374b9b865766b52941eb48c92c0c4b0c"
+    },
+    {
       "path": "Submission/ThreeSum/TernaryTypeLowerBound.lean",
       "bytes": 4951,
       "sha256": "5ae8642c2e6eac6f21cd2834718d3a22fe98807474d670938de1da3762bd8875"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryUniformQueryTime.lean",
+      "bytes": 5029,
+      "sha256": "082aa66cb674db06a075b826d2dd2b1d0fa2ef37730079234f468e03a88119bd"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedBatchCount.lean",
+      "bytes": 1608,
+      "sha256": "d82f5e23adf2a551c7ac43fc8904d28e5b710bf7f22c0e75efa2459c7c6b9d24"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedBatchIndex.lean",
+      "bytes": 4988,
+      "sha256": "2b985e054ab115911e37ceb652b42fca5daf510481fdf8460933e0fd9333e714"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedBatchInverse.lean",
+      "bytes": 826,
+      "sha256": "5b44f3d5a7c56ff0fc0b60593985ce7c27a189d0c28d41ad4e936573df644b96"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedBatchProvenance.lean",
+      "bytes": 4891,
+      "sha256": "30845832e25a111b41bb567f1c5bdfab3048b8de9bba915082d62a62e7b90bf2"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedCanonical.lean",
+      "bytes": 2444,
+      "sha256": "4fb45cb7ac1213006ad23d47faf41ebb7bb6b47e3f85feb3f99ec31968bc4a3e"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedCanonicalPairs.lean",
+      "bytes": 3911,
+      "sha256": "fca10d3f3e0504359fbd2b7da02b03e26bdd4a6a3d9be356bc2999ae23c18b0f"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedDictionaryFiber.lean",
+      "bytes": 3479,
+      "sha256": "2d21805cf443c4dd5d5056f461d37a4caacccdbf56d25fe291f4ec108d99fd03"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedFactorial.lean",
+      "bytes": 1831,
+      "sha256": "bdb54ab149f92b62e302fc976e41fd7c1d6116c5e470a01033dcc626c9b5506d"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedLittleEndian.lean",
+      "bytes": 3817,
+      "sha256": "a23314d3dcfc77172d24cfd97a41249131834ed9bd37613358ef1974d14381f0"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWantedRadix.lean",
+      "bytes": 7530,
+      "sha256": "1f7d2491288c0f6b33ceb9aa0a57f4cef58f38a4fa27e5ef22edce350debca6a"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWeightChannels.lean",
+      "bytes": 3844,
+      "sha256": "1ad3bc72ec6efc53c57d29133110d43cbede269b8ab05db93e6b6ebca103fd25"
+    },
+    {
+      "path": "Submission/ThreeSum/TernaryWeightedPhysicalSources.lean",
+      "bytes": 3843,
+      "sha256": "f9286810ebe31edcb72d1852e214bd482c42695a04efa24719f6efc61b964c47"
     },
     {
       "path": "Submission/ThreeSum/ThreeSumColorBudgets.lean",
@@ -3797,13 +6044,13 @@
     },
     {
       "path": "TERNARY_PROGRESS.md",
-      "bytes": 5263,
-      "sha256": "0cba07fe577028a0cca8b01c90f8d0c054416cd10175ba2b42e8eac86e319a87"
+      "bytes": 4412,
+      "sha256": "b69edfa53f9921858f409188e8e77e3289238967d5e2ed59296c0078058d0405"
     },
     {
       "path": "VERIFICATION.md",
-      "bytes": 7214,
-      "sha256": "e8db1a12ad8422b3b4880483774f99a5ff7265b49e6c2be8f5bda84aa7248872"
+      "bytes": 4893,
+      "sha256": "f5d934f6ac3a79202d6f5f47088a7c965a4aa9eba92e7ebecbdc1833913defdb"
     },
     {
       "path": "VerifierAudit.lean",
@@ -3833,17 +6080,52 @@
     {
       "path": "scripts/build_serial.py",
       "bytes": 9214,
-      "sha256": "99bac789814f15ba85d450888f146350e24a73424975346ea5899dddfcf3b25e"
+      "sha256": "176945daf091920dae7d63e8e1c5515e1f19e762fa20544bb7661def93e5ebe5"
     },
     {
       "path": "scripts/mathlib-cache-roots.txt",
-      "bytes": 4695,
-      "sha256": "2c065984fd84bbfd2a09c69e17f56c861b702f18008a3d031e9a495f922dc69e"
+      "bytes": 5197,
+      "sha256": "e79a44d7427e9a9d28845509b58115ea1688c178d06e9fe8d4f723fc78764eaf"
     },
     {
       "path": "scripts/source-chains.json",
-      "bytes": 39104,
-      "sha256": "65037dc69b1a80245ee3785e496928fcc382317b82028c465a0f1b147419948a"
+      "bytes": 66534,
+      "sha256": "ee97a6c83f9dddcd5e63af28cfdf4f808b0db34db39d57fd374d492620841837"
+    },
+    {
+      "path": "verification/receipts/lean-1.921-20261015/FullSourceAxioms.lean",
+      "bytes": 61719,
+      "sha256": "c214e53eccbf971753e81b14ea19c05604ef1e8f2c971a67066c3dac441f67cb"
+    },
+    {
+      "path": "verification/receipts/lean-1.921-20261015/audit-results.json",
+      "bytes": 148985,
+      "sha256": "e7d3cb18049b9cc6ee578f3da5f85ac7fb1d116b334ecb4249a91b6ce6596d97"
+    },
+    {
+      "path": "verification/receipts/lean-1.921-20261015/audit.log",
+      "bytes": 398,
+      "sha256": "af0e87fd7220169e7cae52cd54aaf9d3a8cb129e0e526ee71fbcd08915cde7d2"
+    },
+    {
+      "path": "verification/receipts/lean-1.921-20261015/build-results.json",
+      "bytes": 216452,
+      "sha256": "48ac28cf82421003ae2089e23b019b2a38608bae4e293052ba43c11031a7597a"
+    },
+    {
+      "path": "verification/receipts/lean-1.921-20261015/build.log",
+      "bytes": 258952,
+      "sha256": "c5264c659592cc704d6f25a833f631347f4127e2aeeca315d14549c09464fa14"
+    },
+    {
+      "path": "verification/receipts/lean-1.921-20261015/summary.json",
+      "bytes": 1041,
+      "sha256": "074cc6f494e92a74263276afeecc551464416783e58b38e2db67bedb324d194c"
+    },
+    {
+      "path": "verification/receipts/lean-1.921-20261015/toolchain.log",
+      "bytes": 333,
+      "sha256": "a2350457d3a86735633d975acae80a3ea45f8a99da92e162a5e8f896f2b4deaf"
     }
   ],
   "local_verification": {
@@ -3864,20 +6146,20 @@
     },
     "complete_source_build": {
       "status": "succeeded",
-      "record": "verification/builds/20261014T184751.212296Z/results.json",
-      "record_sha256": "bb8a01d97249180550a2e5c55258a542dae81bcc50ad47d3077ebeb17f323476",
-      "finished_utc": "2026-10-14T18:47:55.387448+00:00",
-      "chain_count": 305,
-      "module_count": 749,
+      "record": "verification/builds/20261015T124912.703411Z/results.json",
+      "record_sha256": "48ac28cf82421003ae2089e23b019b2a38608bae4e293052ba43c11031a7597a",
+      "finished_utc": "2026-10-15T12:49:20.886263+00:00",
+      "chain_count": 754,
+      "module_count": 1198,
       "validation_method": "aggregate_explicit_modules",
       "command": "python3 scripts/build_serial.py --aggregate"
     },
     "full_source_axiom_audit": {
       "status": "succeeded",
-      "record": "verification/builds/20261014T184755.415461Z_axioms/results.json",
-      "record_sha256": "5b9fce7cc884c56edbd9918d8fe8789badf13c1cf0386bf7c4f7c4d4c69f6a95",
-      "finished_utc": "2026-10-14T18:48:08.050325+00:00",
-      "declaration_count": 29783,
+      "record": "verification/builds/20261015T124949.535032Z_axioms/results.json",
+      "record_sha256": "e7d3cb18049b9cc6ee578f3da5f85ac7fb1d116b334ecb4249a91b6ce6596d97",
+      "finished_utc": "2026-10-15T12:50:00.888793+00:00",
+      "declaration_count": 43763,
       "allowed_axioms": [
         "propext",
         "Classical.choice",

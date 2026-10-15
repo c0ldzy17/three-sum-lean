@@ -1,93 +1,75 @@
-# Ternary construction targeting 1.921
+# Ternary executable and exact 1.921 theorem
 
-The branch preserves the officially verified 1.962 submission at commit
-`2b639655e07421b9ac743de9090459bab473a7c0` and adds Lean proofs and actual
-Light-language procedures for a different, compressed ternary construction.
-**It does not yet prove `EndStatement.ThreeSum.SolvedInTime (1921/1000)`.**
-`Submission.lean` continues to export the complete `981/500` theorem. The
-trusted `EndStatement.lean`, old solver, toolchain, and dependency revisions
-retain their baseline contents.
+The complete theorem is
+[`ThreeSum.solvedInTime_1921_1000`](Submission/ThreeSum/TernaryFinalSolver.lean),
+with `Race.bound` exporting the exact rational `1921/1000`. The frozen-source
+full build and axiom audit passed on 15 October 2026; see
+[VERIFICATION.md](VERIFICATION.md). Earlier numerical certificates or individual
+component builds do not replace those checks.
 
-## What is proved
+The original 1.962 solver, trusted statement, model/compiler sources, and
+pinned dependencies retain their baseline contents. The historical official
+acceptance belongs to commit `2b639655e07421b9ac743de9090459bab473a7c0`.
 
-- `TernaryParameters` proves all five principal real-valued ledger terms
-  strictly below `1.9203`, using exact rational logarithm bounds.
-- `TernaryShortLedger` proves the ledger plus explicit fixed-depth scoring
-  overhead strictly below `1.9205 < 1.921`. It charges a representation
-  factor at all `D+1` occurrences, with `D=100000`, exponent `10^-10`, a
-  conservative fourth power of the prime window, and a `0.0001` reserve.
-  These are numerical certificates, not an executable's time theorem.
-- `TernaryJointType` proves the forced six-cell joint type of genuine
-  coordinatewise ternary addition. The cover modules prove actual fixed-type
-  projection-fiber caps, paired-rank counting, and the tagged raw high moment.
-- `TernaryBankEnumeration` and `TernaryNearBankEnumeration` identify the
-  deterministic pruned enumeration with the actual finite rank bank and
-  query neighborhood, including their Gibbs cardinality bounds.
-- `TernaryTransform` and `TernaryConvolution` connect coordinate passes to
-  binomial transforms and ordinary additive convolution. `TernaryCodeSemantics`
-  connects canonical two-bit address operations to trit coordinate updates.
-- `TernaryPhysicalSources` preserves original record multiplicities:
-  convolution of histograms is exactly the count of indexed record pairs.
-- `LightTernaryEnumerationSetup` is a closed program that constructs its
-  own power table and enumerates the compact bank. The near enumerator,
-  lookup, metadata, forward/inverse passes, product, exact division, and
-  Euler memo modules specify actual programs with execution-time and
-  memory-preservation contracts. The numeric address width is `2N`; the
-  enumerators visit only admitted ternary states.
-- `LightFiniteTable` initializes any fixed finite dictionary from literal
-  program instructions. It does not assume input-dependent advice.
-- `TernaryResidueScore` and `TernaryResidueChain` retain positive represented
-  false-triple scores and the representation loss during prime selection.
-  `TernaryGlobalEncoding` supplies the signed radix bridge for arbitrary
-  original records. `TernaryHybridCore` and `TernaryEndBridge` transfer a
-  concrete fast solver, once supplied, to the unchanged benchmark statement.
+## Concrete proof chain
 
-## Remaining obligations
+- [`TernaryConcreteProfile`](Submission/ThreeSum/TernaryConcreteProfile.lean)
+  chooses fixed parameters for each magnitude exponent κ. Its simultaneous
+  bounds cover the minor condition, collision cleanup, carry cost, and
+  runtime margins. Parameters do not depend on the input values.
+- The actual extension-field backend finds an irreducible polynomial and
+  computes the finite row menu. Signed digits, endpoint tags, all carry
+  occurrences, and original source/requester indices are carried through
+  the literal dictionary and query constructors.
+- The prefix loop executes admissibility checks, append hashing, wanted-row
+  enumeration, collision scores, weighted tensor counts, and the selector.
+  Its integer upper budgets do not require evaluating the enormous initial
+  moment potential. Actual replay and commit receipts establish the selected
+  rows and retained physical memory.
+- [`TernaryColoredTerminalReceipt`](Submission/ThreeSum/TernaryColoredTerminalReceipt.lean)
+  converts the executed loop invariant into canonical final hashes, committed
+  original key arrays, bank/wanted metadata, the live host header, and zero
+  paired potential. It also proves the actual collision counts are at most
+  `n^(7483/10000)`. These facts are derived from the original normalized inputs.
+- Zero potential yields bounded physical support after singleton cleanup.
+  The implementation handles deleted source values with exact two-sum scans
+  and membership searches. The retained groups use actual weighted moments
+  and a finite moment detector, without a rank or decision oracle.
+- [`TernaryColoredRuntimeCertificate`](Submission/ThreeSum/TernaryColoredRuntimeCertificate.lean)
+  discharges the concrete runtime model and prices the actual global query
+  maximum. It bounds the full preprocessing, initialization, selected-prefix
+  execution, cleanup, and final reporting cost by `P.colorTime`.
+- [`TernaryProfileFastExecution`](Submission/ThreeSum/TernaryProfileFastExecution.lean)
+  connects the actual colored solver to the outer coloring program on the
+  original input segment. The hybrid executable handles finite exceptional
+  input sizes and the magnitude guard with actual fallback code.
+- [`TernaryFinalSolver`](Submission/ThreeSum/TernaryFinalSolver.lean)
+  supplies the complete solver, polynomial resource bound, and eventual
+  exact time inequality for every κ, then transfers them to the unchanged
+  benchmark statement. The decision concerns distinct original positions,
+  including inputs with repeated values.
 
-The final fast program has not been supplied to the hybrid/end bridge.
-Its original-input source and wanted-output dictionary joins, selected-prime
-scoring calls, complete bounded query/reporting engine, and complete global
-resource/time contracts must be assembled and proved. Individual execution
-contracts still state their physical layout, source support, metadata, and
-arithmetic bounds; a final host must discharge those conditions from its
-actual preceding procedures.
+## Exponent and verification scope
 
-The finite cover, literal output-fiber bounds, and representation-overhead
-parameter selection are proved. The principal running-time port still needs
-the actual typed-output cardinality rate corresponding to `Hpi`, rather than
-only a smaller combinatorial lower bound. The wanted-output constructor must
-enumerate per-target radix fibers; enumerating the complete global output
-dictionary would retain an `n^2` charge.
+[`TernaryProfileRuntime`](Submission/ThreeSum/TernaryProfileRuntime.lean)
+proves `PowerBound` for the size-only per-color and outer budgets at
+`19209/10000 = 1.9209`. The strict margin absorbs subpolynomial factors and
+produces the final eventual bound `n^(1921/1000)`. A `PowerBound` exponent is
+not a measured runtime or an assertion of an exact practical crossover.
+The earlier principal ledger near 1.92028 is not the exported theorem's bound.
 
-The restricted-coordinate Euler law is proved in `TernaryPartialEuler`.
-Endpoint-prefix reporting still needs its pair-specific inverse-product stages
-and cumulative cost proof; one unrestricted count does not pay for those
-stages. The actual frozen query has proved leaves and recursive branch
-contracts, but its complete execution induction remains open. No benchmark
-theorem may be obtained by treating an unimplemented query or score as one
-machine operation.
-
-The accepted binary executable's parameters alone cannot yield 1.921: its
-source-loading, box, and recursive-query charges prevent that substitution.
-The ternary work therefore preserves the old theorem instead of changing its
-rational exponent without a new executable proof.
-
-## Reproduction
-
-Use the pinned Lean 4.33.1 and unchanged dependency manifest. After restoring
-the dependency cache, check every explicitly planned submitted module with:
+The final package records successful checks of its frozen source bytes:
 
 ```bash
 python3 scripts/build_serial.py --aggregate
 python3 scripts/audit_axioms.py
 ```
 
-The aggregate mode checks the same exact pins, full source-plan coverage,
-compiler version, and source freeze as serial mode, and selects every module
-explicitly in one Lake invocation. The audit imports every submitted module,
-rejects submitted axioms, and checks all transitive dependencies against
-`propext`, `Classical.choice`, and `Quot.sound`.
+Current build receipt: [successful build receipt](verification/receipts/lean-1.921-20261015/build-results.json).
+Current full-source audit receipt: [successful audit receipt](verification/receipts/lean-1.921-20261015/audit-results.json).
+Verified proof-source commit: 74516abc0b3ea820c21a3e07a30d0dfe3f93816f.
 
-Receipts record the exact checked source hashes. The original hosted receipt
-does not certify these additions; local compilation and axiom-policy checks
-are not a new hosted Comparator or Nanoda receipt.
+A new hosted Comparator receipt and independent Nanoda result have not been
+established. Historical baseline checks do not certify this revision. No
+new official record, priority claim, or practical-speed claim follows from
+this local development.
