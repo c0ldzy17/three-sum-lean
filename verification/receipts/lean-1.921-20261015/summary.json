@@ -1,0 +1,25 @@
+{
+  "bound": "1921/1000",
+  "exported_theorem": "Race.bound",
+  "proof_sources_sha256": "d80a4843eecc48b2942f6b312e4c0229a722c4d733f3f61afa5272dadc8555cc",
+  "module_count": 1198,
+  "chain_count": 754,
+  "submitted_declaration_count": 43763,
+  "submitted_axioms": 0,
+  "allowed_transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_status": "succeeded",
+  "audit_status": "succeeded",
+  "hosted_verification": "not rerun for this revision",
+  "files": {
+    "FullSourceAxioms.lean": "c214e53eccbf971753e81b14ea19c05604ef1e8f2c971a67066c3dac441f67cb",
+    "audit-results.json": "e7d3cb18049b9cc6ee578f3da5f85ac7fb1d116b334ecb4249a91b6ce6596d97",
+    "audit.log": "af0e87fd7220169e7cae52cd54aaf9d3a8cb129e0e526ee71fbcd08915cde7d2",
+    "build-results.json": "48ac28cf82421003ae2089e23b019b2a38608bae4e293052ba43c11031a7597a",
+    "build.log": "c5264c659592cc704d6f25a833f631347f4127e2aeeca315d14549c09464fa14",
+    "toolchain.log": "a2350457d3a86735633d975acae80a3ea45f8a99da92e162a5e8f896f2b4deaf"
+  }
+}

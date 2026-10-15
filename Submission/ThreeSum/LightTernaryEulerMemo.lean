@@ -81,7 +81,7 @@ theorem meets {pMain pScan pFill pRow pSum pDivide pNaturalDivide N rows ws ks r
     (hEuler : ∀ j < rows,
       LightTernaryWeightedSum.sum (weights j) (keys j) g N=(rank j-h : ℕ)*f j)
     (hV : 2*(N+1)*U ≤ V) (hd : d+5 ≤ lim.depth)
-    (hword : ((N+rows+maxRank+h+pcount+fr+20 : ℕ) : ℤ) ≤ lim.word)
+    (hword : ((N+rows+maxRank+h+20 : ℕ) : ℤ) ≤ lim.word)
     (hw : (lim.space : ℤ) ≤ lim.word) (hfr : fr≤lim.space) :
     Meets lim P pMain d [N,rows,ws,ks,ranks,vals,T,h,maxRank,pcount,fr] μ
       (time N rows (maxRank-T) V)
@@ -132,7 +132,7 @@ theorem meets {pMain pScan pFill pRow pSum pDivide pNaturalDivide N rows ws ks r
       simpa only [hjrank] using hEuler j hj
     · exact hV
     · omega
-    · have hb : N+rows+(T+stage+1)+h+pcount+fr+20 ≤ N+rows+maxRank+h+pcount+fr+20 := by omega
+    · have hb : N+rows+(T+stage+1)+h+20 ≤ N+rows+maxRank+h+20 := by omega
       exact (Int.ofNat_le.mpr hb).trans hword
   apply Meets.of_body hmain
   unfold body time

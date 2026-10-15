@@ -103,7 +103,7 @@ theorem meets {pMain pFill pRow pSum pDivide pNaturalDivide N rows ws ks ranks v
     (hEuler : ∀ j < rows, rank j=current →
       LightTernaryWeightedSum.sum (weights j) (keys j) g N=(current-h : ℕ)*f j)
     (hV : 2*(N+1)*U ≤ V) (hd : d+4 ≤ lim.depth)
-    (hcontrols : ((N+rows+current+h+pcount+fr+20 : ℕ) : ℤ) ≤ lim.word) :
+    (hcontrols : ((N+rows+current+h+20 : ℕ) : ℤ) ≤ lim.word) :
     Meets lim P pMain d [N,rows,ws,ks,ranks,vals,current,h,pcount,fr] μ
       (time N rows V)
       (fun r ν => r=0 ∧ Stored μ ν f rank vals current fr rows) := by

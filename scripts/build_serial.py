@@ -26,7 +26,7 @@ PINS = {
     "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
     "lakefile.toml": "5ad072c0aca3c7ab777a99938f583ef92bc121101917b7818b5f53f1a384b08c",
     "lake-manifest.json": "484af05025301c3920dfeb644f6dbb7f02b05f596bf48831c9324e383694db25",
-    "scripts/source-chains.json": "65037dc69b1a80245ee3785e496928fcc382317b82028c465a0f1b147419948a",
+    "scripts/source-chains.json": "ee97a6c83f9dddcd5e63af28cfdf4f808b0db34db39d57fd374d492620841837",
 }
 
 
